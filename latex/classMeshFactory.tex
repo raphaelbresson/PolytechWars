@@ -1,0 +1,54 @@
+\hypertarget{classMeshFactory}{\section{Mesh\-Factory Class Reference}
+\label{classMeshFactory}\index{Mesh\-Factory@{Mesh\-Factory}}
+}
+
+
+Classe de gestion des shaders et de génération des modèles 3\-D.  
+
+
+
+
+{\ttfamily \#include $<$Mesh\-Factory.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMeshFactory_a4e7e1572a5d2ce108b5e2c53b58499d2}{\hyperlink{classMeshFactory_a4e7e1572a5d2ce108b5e2c53b58499d2}{Mesh\-Factory} ()}\label{classMeshFactory_a4e7e1572a5d2ce108b5e2c53b58499d2}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hypertarget{classMeshFactory_a642f0dc431ea97f93d3e1cea6df64b8e}{\hyperlink{classMeshFactory_a642f0dc431ea97f93d3e1cea6df64b8e}{$\sim$\-Mesh\-Factory} ()}\label{classMeshFactory_a642f0dc431ea97f93d3e1cea6df64b8e}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classMeshFactory_aed116b3fd378392baa10bae536a83ed4}{\hyperlink{classModel3DS}{Model3\-D\-S} $\ast$ \hyperlink{classMeshFactory_aed116b3fd378392baa10bae536a83ed4}{create3\-D\-S\-Model} (std\-::string const \&model\-Name)}\label{classMeshFactory_aed116b3fd378392baa10bae536a83ed4}
+
+\begin{DoxyCompactList}\small\item\em Création d'un modèle à partir d'un fichier 3\-D\-S M\-A\-X. \end{DoxyCompactList}\item 
+\hypertarget{classMeshFactory_a5e35b9f6089ea14c6c9ad88a8ba6f66e}{\hyperlink{classSkybox}{Skybox} $\ast$ \hyperlink{classMeshFactory_a5e35b9f6089ea14c6c9ad88a8ba6f66e}{create\-Skybox} (std\-::string const \&images)}\label{classMeshFactory_a5e35b9f6089ea14c6c9ad88a8ba6f66e}
+
+\begin{DoxyCompactList}\small\item\em Création de l'environnement (simulation de l'espace ici) \end{DoxyCompactList}\item 
+\hypertarget{classMeshFactory_a25c338f855f27bd73bbc7bd7b6a1bf7b}{\hyperlink{classSphere}{Sphere} $\ast$ \hyperlink{classMeshFactory_a25c338f855f27bd73bbc7bd7b6a1bf7b}{create\-Planet} (float radius, std\-::string const \&texture)}\label{classMeshFactory_a25c338f855f27bd73bbc7bd7b6a1bf7b}
+
+\begin{DoxyCompactList}\small\item\em Retourne un sphère texturée qui représente une planète. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMeshFactory_ae8037c270e2e37be03cc5dcc7f5c5d58}{\hyperlink{classTexture}{Texture} $\ast$ \hyperlink{classMeshFactory_ae8037c270e2e37be03cc5dcc7f5c5d58}{get\-Texture} (std\-::string const \&name)}\label{classMeshFactory_ae8037c270e2e37be03cc5dcc7f5c5d58}
+
+\begin{DoxyCompactList}\small\item\em Retourne directement la texture si elle existe déjà sinon la crée puis la retourne. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMeshFactory_a49c1212540dc91ab923efc1d02e305b9}{\hyperlink{classShader}{Shader} $\ast$ \hyperlink{classMeshFactory_a49c1212540dc91ab923efc1d02e305b9}{m\-\_\-shader\-Texture2\-D}}\label{classMeshFactory_a49c1212540dc91ab923efc1d02e305b9}
+
+\begin{DoxyCompactList}\small\item\em Programme shader pour les modèles utilisant des textures 2\-D. \end{DoxyCompactList}\item 
+\hypertarget{classMeshFactory_a68d434125dbe5a1c7a7772602d5e77fd}{std\-::map$<$ std\-::string, \hyperlink{classTexture}{Texture} $\ast$ $>$ \hyperlink{classMeshFactory_a68d434125dbe5a1c7a7772602d5e77fd}{m\-\_\-textures}}\label{classMeshFactory_a68d434125dbe5a1c7a7772602d5e77fd}
+
+\begin{DoxyCompactList}\small\item\em Textures gérées directement par la factory (tous sauf 3\-D\-S) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de gestion des shaders et de génération des modèles 3\-D. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MeshFactory_8h}{Mesh\-Factory.\-h}\item 
+Mesh\-Factory.\-cpp\end{DoxyCompactItemize}

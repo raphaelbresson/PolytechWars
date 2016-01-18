@@ -1,0 +1,14 @@
+#version 330 core
+
+in vec2 coordTex;
+
+uniform vec4 color;
+
+uniform sampler2D texture;
+
+out vec4 out_color;
+
+void main()
+{
+  out_color = vec4(color.rgb, texture2D(texture, coordTex).r * color.a);
+}

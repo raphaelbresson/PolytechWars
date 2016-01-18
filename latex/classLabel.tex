@@ -1,0 +1,63 @@
+\hypertarget{classLabel}{\section{Label Class Reference}
+\label{classLabel}\index{Label@{Label}}
+}
+
+
+Représente un objet Texte 2\-D.  
+
+
+
+
+{\ttfamily \#include $<$Label.\-h$>$}
+
+Inheritance diagram for Label\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classLabel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLabel_a89439b76cefcfc6b560c2920e987072a}{\hyperlink{classLabel_a89439b76cefcfc6b560c2920e987072a}{Label} (std\-::string const \&font, unsigned int taille\-Font, \hyperlink{classShader}{Shader} $\ast$shad, glm\-::vec2 const \&position)}\label{classLabel_a89439b76cefcfc6b560c2920e987072a}
+
+\begin{DoxyCompactList}\small\item\em Constructeur+. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_a39e1167a9b5827afd888780973d88894}{virtual \hyperlink{classLabel_a39e1167a9b5827afd888780973d88894}{$\sim$\-Label} ()}\label{classLabel_a39e1167a9b5827afd888780973d88894}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_a60d568210a67b61388a47fca5326beee}{void \hyperlink{classLabel_a60d568210a67b61388a47fca5326beee}{load} (G\-Lenum drawing\-Method)}\label{classLabel_a60d568210a67b61388a47fca5326beee}
+
+\begin{DoxyCompactList}\small\item\em Génération des objets Open\-G\-L. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_ae8ac49d6d22dc837418dce2ea3c01637}{virtual void \hyperlink{classLabel_ae8ac49d6d22dc837418dce2ea3c01637}{draw} (glm\-::mat4 ortho)}\label{classLabel_ae8ac49d6d22dc837418dce2ea3c01637}
+
+\begin{DoxyCompactList}\small\item\em Affichage du label. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_afe0eb04dde9253dae986980ab7af5e28}{virtual void \hyperlink{classLabel_afe0eb04dde9253dae986980ab7af5e28}{clean\-Up} ()}\label{classLabel_afe0eb04dde9253dae986980ab7af5e28}
+
+\begin{DoxyCompactList}\small\item\em Détruit les objets de construction intermédiaires. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_a2691251a8ef0e53e31438feb5606ec35}{void \hyperlink{classLabel_a2691251a8ef0e53e31438feb5606ec35}{set\-Text} (std\-::string const \&text, S\-D\-L\-\_\-\-Color const \&color, float taille, G\-Lenum drawing\-Method)}\label{classLabel_a2691251a8ef0e53e31438feb5606ec35}
+
+\begin{DoxyCompactList}\small\item\em Changement du texte et regénération. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_abf96331e65169cd9855dd3690da9de2b}{void \hyperlink{classLabel_abf96331e65169cd9855dd3690da9de2b}{load} ()}\label{classLabel_abf96331e65169cd9855dd3690da9de2b}
+
+\begin{DoxyCompactList}\small\item\em Génère les objets opengl (vbo,vao,textures) pour cet objet graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLabel_a7f03adffc29da896d49f36d23a72c9b6}{std\-::vector$<$ float $>$ \hyperlink{classLabel_a7f03adffc29da896d49f36d23a72c9b6}{m\-\_\-coord\-Tex}}\label{classLabel_a7f03adffc29da896d49f36d23a72c9b6}
+
+\begin{DoxyCompactList}\small\item\em Tableau temporaire de coordonnées de texture. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_a8661786a76b31418bc167e1e48b44ac8}{\hyperlink{classFont}{Font} \hyperlink{classLabel_a8661786a76b31418bc167e1e48b44ac8}{m\-\_\-font}}\label{classLabel_a8661786a76b31418bc167e1e48b44ac8}
+
+\begin{DoxyCompactList}\small\item\em Gestion du texte. \end{DoxyCompactList}\item 
+\hypertarget{classLabel_a29541e67ad5511df91e29ac41fe29aa7}{unsigned int \hyperlink{classLabel_a29541e67ad5511df91e29ac41fe29aa7}{m\-\_\-taille\-Font}}\label{classLabel_a29541e67ad5511df91e29ac41fe29aa7}
+
+\begin{DoxyCompactList}\small\item\em Taille de la police. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Représente un objet Texte 2\-D. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Label_8h}{Label.\-h}\item 
+Label.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+#version 330 core
+
+
+//UNIFORM
+uniform mat4 mvp;
+uniform vec3 viewPos;
+uniform float tileSize;
+
+//SORTIES
+out vec2 TexCoordX;
+out vec2 TexCoordY;
+out vec2 TexCoordZ;
+out vec3 ViewDir;
+out mat3 tangentSpace;
+out float height;
+//ENTREES
+in vec3 in_Vertex;
+in vec3 in_Normals;
+     
+vec4 getPosition(mat4 matWorld, vec3 vertexPosition)
+{
+  return matWorld *  vec4(vertexPosition, 1.0);
+}
+     
+void main( void )
+{
+   gl_Position = getPosition(mvp,in_Vertex);
+   vec3 worldPos = in_Vertex;//on recupère la position dans le monde
+   height = in_Vertex.y;
+   //on calcule les coordonnees de texture
+   TexCoordX = worldPos.zy*tileSize;
+   TexCoordY = worldPos.xz*tileSize;
+   TexCoordZ = worldPos.xy*tileSize;
+   
+   
+   vec3 n = normalize(in_Normals);//on récupère la normale et on la normalise
+   n*=n;//on obtient la normale de la normale (normalisée)
+
+   vec3 xtan,ytan,ztan;//tangentes
+   vec3 xbin,ybin,zbin;//binormales
+   
+   xtan = vec3(0,0,1);//PLAN TANGENT POUR LES X
+   xbin = vec3(0,1,0);
+   
+   ytan = vec3(1,0,0);//PLAN TANGENT POUR LES Y
+   ybin = vec3(0,0,1);
+   
+   ztan = vec3(1,0,0);//PLAN TANGENT POUR LES Z
+   zbin = vec3(0,1,0);
+   vec3 worldBinormal = normalize(xbin*n.x+ybin*n.y+zbin*n.z);//calcul de la binormale
+   vec3 worldTangent = normalize(xtan*n.x+ytan*n.y+ztan*n.z);//Tangente
+
+   ViewDir = worldPos-viewPos;//calcul du vecteur orientation
+   
+   worldTangent = (mvp*vec4(worldTangent,1)).xyz;//Espace tangent
+   worldBinormal = (mvp*vec4(worldBinormal,1)).xyz;//Espace binormal
+
+   vec3 worldNormal = normalize(cross(worldTangent,worldBinormal));//On calcule la normale aux deux espaces
+   
+   tangentSpace[0] = worldTangent;//on remplit la matrice de l'espace tangent avec les vecteurs calculés
+   tangentSpace[1] = worldBinormal;
+   tangentSpace[2] = worldNormal;
+}

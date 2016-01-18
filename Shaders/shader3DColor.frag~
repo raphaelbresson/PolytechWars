@@ -1,0 +1,14 @@
+// Version du GLSL
+#version 150 core
+// Entrée
+in vec3 coordTexture;
+// Uniform
+uniform samplerCube tex;
+// Sortie 
+out vec4 out_Color;
+// Fonction main
+void main()
+{
+    out_Color = texture2D(tex, vec2(coordTexture.s coordTexture.t));
+    
+}

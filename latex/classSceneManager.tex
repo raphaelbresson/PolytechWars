@@ -1,0 +1,60 @@
+\hypertarget{classSceneManager}{\section{Scene\-Manager Class Reference}
+\label{classSceneManager}\index{Scene\-Manager@{Scene\-Manager}}
+}
+
+
+Gestionnaire des modèle, des caméras (pour le 3\-D) et de l'affichage.  
+
+
+
+
+{\ttfamily \#include $<$Scene\-Manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSceneManager_a52085e6737c23b491c228e86781af808}{\hyperlink{classSceneManager_a52085e6737c23b491c228e86781af808}{Scene\-Manager} ()}\label{classSceneManager_a52085e6737c23b491c228e86781af808}
+
+\begin{DoxyCompactList}\small\item\em Constucteur. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_a2bb376a85d29e85f47753e26c7539229}{virtual \hyperlink{classSceneManager_a2bb376a85d29e85f47753e26c7539229}{$\sim$\-Scene\-Manager} ()}\label{classSceneManager_a2bb376a85d29e85f47753e26c7539229}
+
+\begin{DoxyCompactList}\small\item\em Constucteur. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_a28285bcb48151c06270333d39800d100}{\hyperlink{classMeshNode}{Mesh\-Node} $\ast$ \hyperlink{classSceneManager_a28285bcb48151c06270333d39800d100}{add\-Mesh\-Node} (\hyperlink{classAbstractMesh}{Abstract\-Mesh} $\ast$mesh, glm\-::vec3 const \&position, glm\-::vec3 const \&orientation=glm\-::vec3(0, 0, 0))}\label{classSceneManager_a28285bcb48151c06270333d39800d100}
+
+\begin{DoxyCompactList}\small\item\em Ajout d'un modèle 3\-D dans la scene, renvoie le \hyperlink{classMeshNode}{Mesh\-Node} créé \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_a0a09312366326529be7146f5825f703e}{void \hyperlink{classSceneManager_a0a09312366326529be7146f5825f703e}{add\-Widget} (\hyperlink{classAbstractWidget}{Abstract\-Widget} $\ast$wid)}\label{classSceneManager_a0a09312366326529be7146f5825f703e}
+
+\begin{DoxyCompactList}\small\item\em Ajout d'un modèle 2\-D sur l'écran. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_a85be3bf568c2050211027b9db5e0ffc2}{void \hyperlink{classSceneManager_a85be3bf568c2050211027b9db5e0ffc2}{init3\-D} (int w, int h)}\label{classSceneManager_a85be3bf568c2050211027b9db5e0ffc2}
+
+\begin{DoxyCompactList}\small\item\em Initialisation des modèles 3\-D et de la caméra. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_af50c8abaae0774c3ded179269fb4f247}{void \hyperlink{classSceneManager_af50c8abaae0774c3ded179269fb4f247}{init2\-D} ()}\label{classSceneManager_af50c8abaae0774c3ded179269fb4f247}
+
+\begin{DoxyCompactList}\small\item\em Initialisation des objets 2\-D et de la matrice orthogonale. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_a6c3b7f01e718505c424e97bef4bc9394}{void \hyperlink{classSceneManager_a6c3b7f01e718505c424e97bef4bc9394}{init\-Sounds} ()}\label{classSceneManager_a6c3b7f01e718505c424e97bef4bc9394}
+
+\begin{DoxyCompactList}\small\item\em Initialisation des musiques et des effets sonores. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_ae95a2a4d00b37f18b924f30570619a30}{void \hyperlink{classSceneManager_ae95a2a4d00b37f18b924f30570619a30}{draw\-All} ()}\label{classSceneManager_ae95a2a4d00b37f18b924f30570619a30}
+
+\begin{DoxyCompactList}\small\item\em Affichage de tous les modèles. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_a167d8c660828c07aa6b189e0a4c809bd}{void \hyperlink{classSceneManager_a167d8c660828c07aa6b189e0a4c809bd}{on\-Pre\-Render} ()}\label{classSceneManager_a167d8c660828c07aa6b189e0a4c809bd}
+
+\begin{DoxyCompactList}\small\item\em Avant le rendu. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_abbdf898b3f5161018bbc2761fa6a49dd}{bool \hyperlink{classSceneManager_abbdf898b3f5161018bbc2761fa6a49dd}{execute} (S\-D\-L\-\_\-\-Window $\ast$window, unsigned int w, unsigned int h)}\label{classSceneManager_abbdf898b3f5161018bbc2761fa6a49dd}
+
+\begin{DoxyCompactList}\small\item\em Exécution de la boucle principale. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_ab063fdc682ba6a8abe4a02a228f27aab}{void \hyperlink{classSceneManager_ab063fdc682ba6a8abe4a02a228f27aab}{update\-Cameras} ()}\label{classSceneManager_ab063fdc682ba6a8abe4a02a228f27aab}
+
+\begin{DoxyCompactList}\small\item\em Déplace les caméras et met à jour les matrices. \end{DoxyCompactList}\item 
+\hypertarget{classSceneManager_a153fdb0850c95f9c75730a9e76fbd7e0}{void \hyperlink{classSceneManager_a153fdb0850c95f9c75730a9e76fbd7e0}{change\-Camera} ()}\label{classSceneManager_a153fdb0850c95f9c75730a9e76fbd7e0}
+
+\begin{DoxyCompactList}\small\item\em Change de caméra active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gestionnaire des modèle, des caméras (pour le 3\-D) et de l'affichage. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SceneManager_8h}{Scene\-Manager.\-h}\item 
+Scene\-Manager.\-cpp\end{DoxyCompactItemize}

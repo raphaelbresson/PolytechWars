@@ -1,0 +1,60 @@
+\hypertarget{classShader}{\section{Shader Class Reference}
+\label{classShader}\index{Shader@{Shader}}
+}
+
+
+Classe de gestion de programmes shaders (compilation, édition de liens, contrôle et destruction)  
+
+
+
+
+{\ttfamily \#include $<$Shader.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classShader_a85497d4a14f30f3518cf096a19ffdfa9}{\hyperlink{classShader_a85497d4a14f30f3518cf096a19ffdfa9}{Shader} (std\-::string const \&vertex\-Shader, std\-::string const \&fragment\-Shader)}\label{classShader_a85497d4a14f30f3518cf096a19ffdfa9}
+
+\begin{DoxyCompactList}\small\item\em Constructeur à partir d'un fichier vertex\-Shader et d'un fichier fragment\-Shader. \end{DoxyCompactList}\item 
+\hypertarget{classShader_ac25dbd32c17223c50e045ddbf060f5c1}{\hyperlink{classShader_ac25dbd32c17223c50e045ddbf060f5c1}{Shader} (\hyperlink{classShader}{Shader} const \&shader)}\label{classShader_ac25dbd32c17223c50e045ddbf060f5c1}
+
+\begin{DoxyCompactList}\small\item\em Constructeur de copie d'un shader. \end{DoxyCompactList}\item 
+\hypertarget{classShader_aff01df87e8a102f270b5b135a295e59d}{virtual \hyperlink{classShader_aff01df87e8a102f270b5b135a295e59d}{$\sim$\-Shader} ()}\label{classShader_aff01df87e8a102f270b5b135a295e59d}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classShader_a4222b925de192c794cdef621b13a5914}{void \hyperlink{classShader_a4222b925de192c794cdef621b13a5914}{load} ()}\label{classShader_a4222b925de192c794cdef621b13a5914}
+
+\begin{DoxyCompactList}\small\item\em Récupération des sources, compilation et édition de liens. \end{DoxyCompactList}\item 
+\hypertarget{classShader_aaa2ce3b8edbb1954b0b627dcb40cff7e}{std\-::string \hyperlink{classShader_aaa2ce3b8edbb1954b0b627dcb40cff7e}{get\-Vertex\-Shader} () const }\label{classShader_aaa2ce3b8edbb1954b0b627dcb40cff7e}
+
+\begin{DoxyCompactList}\small\item\em Retourne le nom du fichier vertex\-Shader. \end{DoxyCompactList}\item 
+\hypertarget{classShader_ac5069963469dcac0be6841e73de29aa3}{std\-::string \hyperlink{classShader_ac5069963469dcac0be6841e73de29aa3}{get\-Fragment\-Shader} () const }\label{classShader_ac5069963469dcac0be6841e73de29aa3}
+
+\begin{DoxyCompactList}\small\item\em Retourne le nom du fichier fragment\-Shader. \end{DoxyCompactList}\item 
+\hypertarget{classShader_a7caa048bcdc688aba0c691f56bd4c194}{void \hyperlink{classShader_a7caa048bcdc688aba0c691f56bd4c194}{envoyer\-Mat4} (std\-::string const \&nom, glm\-::mat4 const \&matrice)}\label{classShader_a7caa048bcdc688aba0c691f56bd4c194}
+
+\begin{DoxyCompactList}\small\item\em Envoyer une matrice 4x4 comme variable Uniform (commune à toutes les instances de ce shader) \end{DoxyCompactList}\item 
+\hypertarget{classShader_acf2af4edd5d98c008b9fd2de3a55c5cf}{void \hyperlink{classShader_acf2af4edd5d98c008b9fd2de3a55c5cf}{begin} ()}\label{classShader_acf2af4edd5d98c008b9fd2de3a55c5cf}
+
+\begin{DoxyCompactList}\small\item\em Début du rendu \-: à appeler avant le rendu d'un objet pour utiliser ce shader pour son affichage. \end{DoxyCompactList}\item 
+\hypertarget{classShader_abfff82b6778a0b6d1f1a599b1b306b1d}{void \hyperlink{classShader_abfff82b6778a0b6d1f1a599b1b306b1d}{end} ()}\label{classShader_abfff82b6778a0b6d1f1a599b1b306b1d}
+
+\begin{DoxyCompactList}\small\item\em À appeler après le rendu d'un objet ne plus utiliser ce shader. \end{DoxyCompactList}\item 
+\hypertarget{classShader_aae9136479d5affe1b14f1c79efe79600}{bool \hyperlink{classShader_aae9136479d5affe1b14f1c79efe79600}{is\-Program} ()}\label{classShader_aae9136479d5affe1b14f1c79efe79600}
+
+\begin{DoxyCompactList}\small\item\em Renvoie true si le programme shader est valide false sinon. \end{DoxyCompactList}\item 
+\hypertarget{classShader_ad1bc9a16400499ec80c4f716a390abaf}{G\-Luint \hyperlink{classShader_ad1bc9a16400499ec80c4f716a390abaf}{get\-I\-D} ()}\label{classShader_ad1bc9a16400499ec80c4f716a390abaf}
+
+\begin{DoxyCompactList}\small\item\em Renvoie l'identifiant Open\-G\-L de ce shader. \end{DoxyCompactList}\item 
+\hypertarget{classShader_aafa6167c1e130229a19a90bee95aaff0}{void {\bfseries load\-Simple} ()}\label{classShader_aafa6167c1e130229a19a90bee95aaff0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de gestion de programmes shaders (compilation, édition de liens, contrôle et destruction) 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Shader_8h}{Shader.\-h}\item 
+Shader.\-cpp\end{DoxyCompactItemize}

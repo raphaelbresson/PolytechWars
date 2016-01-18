@@ -1,0 +1,56 @@
+\hypertarget{classAbstractGraphicObject}{\section{Abstract\-Graphic\-Object Class Reference}
+\label{classAbstractGraphicObject}\index{Abstract\-Graphic\-Object@{Abstract\-Graphic\-Object}}
+}
+
+
+Classe abstraite définissant un type polymorphe pour les objets graphiques.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\-Graphic\-Object.\-h$>$}
+
+Inheritance diagram for Abstract\-Graphic\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.255033cm]{classAbstractGraphicObject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAbstractGraphicObject_ab1ddb96b82b01bba5e56e0917dceba0c}{\hyperlink{classAbstractGraphicObject_ab1ddb96b82b01bba5e56e0917dceba0c}{Abstract\-Graphic\-Object} (\hyperlink{classShader}{Shader} $\ast$shad)}\label{classAbstractGraphicObject_ab1ddb96b82b01bba5e56e0917dceba0c}
+
+\begin{DoxyCompactList}\small\item\em Construit un objet graphique en utilisant le shader donné en argument pour le rendu. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractGraphicObject_aa20078bf878fc72814a44d5a986ec548}{virtual \hyperlink{classAbstractGraphicObject_aa20078bf878fc72814a44d5a986ec548}{$\sim$\-Abstract\-Graphic\-Object} ()}\label{classAbstractGraphicObject_aa20078bf878fc72814a44d5a986ec548}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractGraphicObject_ae0e201a972ea7e97b032bf21f75390a7}{virtual void \hyperlink{classAbstractGraphicObject_ae0e201a972ea7e97b032bf21f75390a7}{load} ()=0}\label{classAbstractGraphicObject_ae0e201a972ea7e97b032bf21f75390a7}
+
+\begin{DoxyCompactList}\small\item\em Génère les objets opengl (vbo,vao,textures) pour cet objet graphique. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractGraphicObject_a69f33de948f6a754f6c345e5ad439e89}{virtual void \hyperlink{classAbstractGraphicObject_a69f33de948f6a754f6c345e5ad439e89}{clean\-Up} ()}\label{classAbstractGraphicObject_a69f33de948f6a754f6c345e5ad439e89}
+
+\begin{DoxyCompactList}\small\item\em Détruit les objets de construction intermédiaires. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAbstractGraphicObject_a7e1566fbd2b769d12dc43ed9a4dd61f1}{G\-Luint \hyperlink{classAbstractGraphicObject_a7e1566fbd2b769d12dc43ed9a4dd61f1}{m\-\_\-vbo\-I\-D}}\label{classAbstractGraphicObject_a7e1566fbd2b769d12dc43ed9a4dd61f1}
+
+\begin{DoxyCompactList}\small\item\em Identifiant Open\-G\-L du Vertex Buffer Object (V\-B\-O) (généré lors de l'appel de \hyperlink{classAbstractGraphicObject_ae0e201a972ea7e97b032bf21f75390a7}{load()}) \end{DoxyCompactList}\item 
+\hypertarget{classAbstractGraphicObject_aa0fd0c978efb2e99ef3393afcb779313}{G\-Luint \hyperlink{classAbstractGraphicObject_aa0fd0c978efb2e99ef3393afcb779313}{m\-\_\-vao\-I\-D}}\label{classAbstractGraphicObject_aa0fd0c978efb2e99ef3393afcb779313}
+
+\begin{DoxyCompactList}\small\item\em Identifiant Open\-G\-L du Vertex Array Object (V\-A\-O) (généré lors de l'appel de \hyperlink{classAbstractGraphicObject_ae0e201a972ea7e97b032bf21f75390a7}{load()}) \end{DoxyCompactList}\item 
+\hypertarget{classAbstractGraphicObject_a75da74184185de4e01d232a92a2d2b68}{\hyperlink{classShader}{Shader} $\ast$ \hyperlink{classAbstractGraphicObject_a75da74184185de4e01d232a92a2d2b68}{m\-\_\-shader}}\label{classAbstractGraphicObject_a75da74184185de4e01d232a92a2d2b68}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classShader}{Shader} pour le rendu (les shaders sont gérés en externe par les classes \hyperlink{classGuiFactory}{Gui\-Factory} -\/$>$ 2\-D ou Scene\-Factory -\/$>$ 3\-D ) \end{DoxyCompactList}\item 
+\hypertarget{classAbstractGraphicObject_a302995e5cd2cc5565fbe631194e967e1}{std\-::vector$<$ float $>$ \hyperlink{classAbstractGraphicObject_a302995e5cd2cc5565fbe631194e967e1}{m\-\_\-vertices}}\label{classAbstractGraphicObject_a302995e5cd2cc5565fbe631194e967e1}
+
+\begin{DoxyCompactList}\small\item\em Tableau temporaire de sommets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe abstraite définissant un type polymorphe pour les objets graphiques. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{AbstractGraphicObject_8h}{Abstract\-Graphic\-Object.\-h}\end{DoxyCompactItemize}

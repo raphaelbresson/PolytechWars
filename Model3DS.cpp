@@ -32,8 +32,11 @@ void Model3DS::load()
     if(!mesh3ds->extract(file3DS,mesh))
       delete mesh3ds;
     else
+    {
       m_meshes.push_back(mesh3ds);
-      
+      updateBoundingBox(mesh3ds->getMaxVert().x,mesh3ds->getMaxVert().y,mesh3ds->getMaxVert().z);
+      updateBoundingBox(mesh3ds->getMinVert().x,mesh3ds->getMinVert().y,mesh3ds->getMinVert().z);
+    }
   }
   lib3ds_file_free(file3DS); //LIBERATION DES RESSOURCES ALLOUÉES POUR ACCEDER AU FICHIER 3DS.
 }

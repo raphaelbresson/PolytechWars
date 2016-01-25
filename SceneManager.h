@@ -14,7 +14,7 @@
 
 /**
  * \file SceneManager.h
- * \Author Raphaël BRESSON, Mahdi HAMMOUCHE
+ * \author Raphaël BRESSON, Mahdi HAMMOUCHE
  * \brief Gestion des modèles et de l'affichage
  * \def FPS_LIMIT
  * \brief Limitation de la fréquence de rafraichissement à 60 FPS
@@ -38,10 +38,10 @@ public:
   */
   virtual ~SceneManager();
  /**
-  * \fn MeshNode* addMeshNode(Mesh* mesh, glm::vec3 position, glm::vec3 orientation = glm::vec3(0,0,0))
+  * \fn MeshNode* addMeshNode(NodeType type,Mesh* mesh, glm::vec3 position, glm::vec3 orientation = glm::vec3(0,0,0))
   * \brief Ajout d'un modèle 3D dans la scene, renvoie le MeshNode créé
   */
-  MeshNode* addMeshNode(AbstractMesh* mesh, glm::vec3 const& position, glm::vec3 const& orientation = glm::vec3(0,0,0));
+  MeshNode* addMeshNode(NodeType type,AbstractMesh* mesh, glm::vec3 const& position, glm::vec3 const& orientation = glm::vec3(0,0,0));
  /**
   * \fn void addWidget(Widget* wid)
   * \brief Ajout d'un modèle 2D sur l'écran
@@ -72,6 +72,11 @@ public:
   * \brief Avant le rendu
   */
   void onPreRender();
+  /**
+   * \fn void testsCollision()
+   * \brief Tests de collision des m_meshDynNodes
+   */
+  void testsCollision();
  /**
   * \fn bool execute(SDL_Window* window, unsigned int w, unsigned int h)
   * \brief Exécution de la boucle principale
@@ -93,6 +98,11 @@ private:
   * \brief Tableau d'objets 3D
   */ 
   std::vector<MeshNode*> m_meshNodes;
+  /**
+  * \var std::vector<MeshNode*> m_meshDynNodes
+  * \brief Tableau d'objets 3D déplaçables (à tester pour les collisions)
+  */ 
+  std::vector<MeshNode*> m_meshDynNodes;
  /**
   * \var std::vector<AbstractWidget*> m_widgets
   * \brief Tableau d'objets 2D

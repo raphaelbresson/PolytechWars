@@ -18,6 +18,7 @@ SceneManager::~SceneManager()
   for(unsigned int i=0; i < m_meshNodes.size(); i++)
     delete m_meshNodes[i];
   m_meshNodes.clear();
+  m_meshDynNodes.clear();
   for(unsigned int i = 0 ; i < m_cameras.size() ; i++)
     delete m_cameras[i];
   m_cameras.clear();
@@ -39,9 +40,9 @@ void SceneManager::drawAll()
 /*
  * AJOUT D'UN MESH
  */
-MeshNode* SceneManager::addMeshNode(AbstractMesh* mesh, glm::vec3 const& position, glm::vec3 const& orientation)
+MeshNode* SceneManager::addMeshNode(NodeType type,AbstractMesh* mesh, glm::vec3 const& position, glm::vec3 const& orientation)
 {
-  MeshNode* m = new MeshNode(mesh,position,orientation);
+  MeshNode* m = new MeshNode(type,mesh,position,orientation);
   m_meshNodes.push_back(m);
   return m;
 }
@@ -71,6 +72,9 @@ void SceneManager::init2D()
   Label* indication = m_guiFact.createLabel(glm::vec2(100.0f,550.0f),"Font/cs.ttf");
   indication->setText("Pour quitter, echap tu presseras", rouge, 20.0, GL_STATIC_DRAW);
   addWidget(indication);
+  Label* collisionTest = m_guiFact.createLabel(glm::vec2(2.0f,2.0f),"Font/cs.ttf");
+  vitesse->setText("Distance : 0",blanc,30.0, GL_DYNAMIC_DRAW);
+  addWidget(collisionTest);
 }
 
 /*
@@ -79,19 +83,20 @@ void SceneManager::init2D()
 void SceneManager::init3D(int w, int h)
 { 
   Skybox *sky = m_meshFact.createSkybox("Images/textureCube.jpg"); 					/* CREATION D'UN CUBE (SKYBOX) */
-  addMeshNode(sky,glm::vec3(1.0f,0.0f,1.0f));									
+  addMeshNode(NODE_SKYBOX,sky,glm::vec3(1.0f,0.0f,1.0f));									
   Model3DS *vaisseau = m_meshFact.create3DSModel("Models/falcon3DS/milfalcon.3ds");				/* CREATION DU VAISSEAU DE YANN SOLO */
-  MeshNode *vaisseauNode = addMeshNode(vaisseau,glm::vec3(0.0f,0.0f,0.0f), glm::vec3(270.0f,0.0f,0.0f));	
+  MeshNode *vaisseauNode = addMeshNode(NODE_BB,vaisseau,glm::vec3(0.0f,0.0f,0.0f), glm::vec3(270.0f,0.0f,0.0f));
+  m_meshDynNodes.push_back(vaisseauNode); /* On ajoute le modele du vaisseau à la liste des modeles à tester pour les collisions */
   Sphere* terre = m_meshFact.createPlanet(50.0f,"Images/terre.jpg");						/* TERRE */
-  addMeshNode(terre, glm::vec3(300.0f,50.0f,-12.0f));
+  addMeshNode(NODE_SPHERE,terre, glm::vec3(300.0f,50.0f,-12.0f));
   Sphere* venus = m_meshFact.createPlanet(50.0f,"Images/venus.jpg");						/* VENUS */
-  addMeshNode(venus, glm::vec3(300.0f,-100.0f,400.0f));
-  Sphere *pluton = m_meshFact.createPlanet(50.0f,"Images/pluton.jpg");						/* JUPITER */
-  addMeshNode(pluton, glm::vec3(-100.0f,150.0f,-300.0f));
+  addMeshNode(NODE_SPHERE,venus, glm::vec3(300.0f,-100.0f,400.0f));
+  Sphere *pluton = m_meshFact.createPlanet(50.0f,"Images/pluton.jpg");						/* PLUTON */
+  addMeshNode(NODE_SPHERE,pluton, glm::vec3(-100.0f,150.0f,-300.0f));
   Sphere *neptune = m_meshFact.createPlanet(50.0f,"Images/neptune.jpg");					/* NEPTUNE */
-  addMeshNode(neptune, glm::vec3(-400.0f,100.0f,-150.0f));
+  addMeshNode(NODE_SPHERE,neptune, glm::vec3(-400.0f,100.0f,-150.0f));
   Sphere *jupiter = m_meshFact.createPlanet(50.0f,"Images/jupiter.jpg");					/* JUPITER */
-  addMeshNode(jupiter, glm::vec3(200.0f,10.0f,-300.0f));
+  addMeshNode(NODE_SPHERE,jupiter, glm::vec3(200.0f,10.0f,-300.0f));
   glm::vec3 position(0.0f,0.0f,-15.0f), cible(0.0f,0.0f,-14.0f), up(0.0f,1.0f,0.0f);
   float proche = 0.01f, loin=1000000.0f, ratio = (float) w / (float) h, vitesseFPS = 0.1f, sensibiliteFPS = 0.1f;
   CameraFPS* cameraFPS = new CameraFPS(position, up, cible, proche, loin, ratio, vitesseFPS, sensibiliteFPS);
@@ -119,6 +124,7 @@ void SceneManager::initSounds()
  */
 void SceneManager::onPreRender()
 {
+  /* GUI */
   float period = 1.0 / FPS_LIMIT;
   static float vitesseCamera = 0.0f;
   static glm::vec3 positionCamera(0.0f,0.0f,-15.0f);
@@ -140,6 +146,31 @@ void SceneManager::onPreRender()
   if(!m_soundMgr.isPlayingMusic())
     m_soundMgr.nextMusic();
   m_soundMgr.playEffect("vaisseau",m_cameras[m_activeCamera]->getVitesse() * 127 / 100);
+  /* 3D */
+  testsCollision();
+}
+
+void SceneManager::testsCollision()
+{
+  SDL_Color blanc = { 255,255,255 };
+  float distanceMin = 2000000;
+  for(unsigned int i=0;i<m_meshDynNodes.size();i++)
+  {
+    for(unsigned int j=0;j<m_meshNodes.size();j++)
+    {
+      if(m_meshDynNodes[i] != m_meshNodes[j])
+      {
+	float distance = m_meshDynNodes[i]->testCollision(m_meshNodes[j]);
+	if(distance < distanceMin )
+	  distanceMin = distance;
+	//m_meshDynNodes[i]->animationCollision();
+      }
+    }
+  }
+  std::ostringstream streamDistance;
+  streamDistance << "Distance: " << int(distanceMin);   				
+  ((Label*)m_widgets[2])->setText(streamDistance.str(),blanc,30.0, GL_DYNAMIC_DRAW);
+
 }
 /*
  * ANIMATION DES CAMERAS
@@ -183,14 +214,14 @@ bool SceneManager::execute(SDL_Window* window, unsigned int w, unsigned int h)
     updateCameras();									/* MISE À JOUR DES CAMERAS */
     if(m_input.getKey(SDL_SCANCODE_ESCAPE))  break;					/* QUITTER EN APPUYANT SUR ESPACE */
     if(m_input.getKeyRelease(SDL_SCANCODE_V)) changeCamera();					/* CHANGER DE CAMERA EN APPUYANT SUR ESPACE */
-    if(m_input.getKeyRelease(SDL_SCANCODE_SPACE)) m_soundMgr.playEffect("laser",127/2);
+    if(m_input.getKeyRelease(SDL_SCANCODE_SPACE)) m_soundMgr.playEffect("laser",127/2);	/* SON DU LASER SI ON APPUIE SUR ESPACE */
     drawAll();										/* AFFICHAGE DE TOUS LES MODELES DU MONDE 3D */
     SDL_GL_SwapWindow(window);								/* RAFRAICHISSEMENT DE LA FENETRE */    
     fin = SDL_GetTicks();								/* ON RELEVE LE TEMPS DE FIN DE BOUCLE */
     time = (float)(fin - debut);							/* ON CALCULE LE TEMPS D'EXECUTION DE LA BOUCLE */
     fps = 1000.0/time;									/* ON CALCULE LA FREQUENCE MAXIMALE */
     std::ostringstream streamTitle;
-    streamTitle << "fps: " << fps;							
+    streamTitle << "fps: " << int(fps);							
     SDL_SetWindowTitle(window,streamTitle.str().c_str());				/* ON AFFICHE LA FREQUENCE COMME TITRE DE LA FENETRE */
     if(time < period)
       SDL_Delay((unsigned int)(period - time));  					/* ON LIMITE LA FREQUENCE A 60 FPS */

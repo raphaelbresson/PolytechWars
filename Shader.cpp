@@ -33,7 +33,6 @@ void Shader::loadSimple()
 void Shader::load()
 {
   libererRessources();
-  
   m_programID = createProgram();
   m_vertID = compileShader(m_vert,GL_VERTEX_SHADER);
   m_fragID = compileShader(m_frag,GL_FRAGMENT_SHADER);

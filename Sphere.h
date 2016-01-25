@@ -35,6 +35,11 @@ public:
    * \brief Affichage
    */
   void draw(glm::mat4 mvp);
+  /**
+   * \fn float getRadius() const
+   * \brief Retourne la valeur du rayon de la sphere
+   */
+  float getRadius() const { return m_radius; }
 private:
   /**
    * \fn void computeIndexes(unsigned int lats, unsigned int longs)

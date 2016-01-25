@@ -2,12 +2,14 @@
 #define _DEF_ABSTRACT_MESH_H
 #include "AbstractGraphicObject.h"
 #include "Texture.h"
+
 /**
  * \file AbstractMesh.h
  * \brief Définition d'un type polymorphe pour les modèles 3D
  * \class AbstractMesh
  * \brief Type polymorphe pour les modèles 3D
  */
+
 class AbstractMesh : public AbstractGraphicObject
 {
 public:
@@ -42,6 +44,22 @@ public:
    */
   virtual void cleanUp();
   
+  /**
+   * \fn glm::vec3 getMaxVert() const
+   * \brief Retourne les coordonnées maximales de la boundingBox
+   */
+  glm::vec3 getMaxVert() const { return m_maxVert; }
+  
+  /**
+   * \fn glm::vec3 getMaxVert() const
+   * \brief Retourne les coordonnées minimales de la boundingBox
+   */
+  glm::vec3 getMinVert() const { return m_minVert; }
+  /**
+   * \fn void initBoundingBox(glm::vec3 const & vertex)
+   * \brief Teste les coordonnées de l'objet et construit la boundingBox (m_min,m_max)
+   */
+  void updateBoundingBox(float x, float y, float z);
 protected:
   /**
    * \var std::vector<float> m_coordTex;
@@ -58,6 +76,18 @@ protected:
    * \brief Nombre de vertices de ce mesh
    */
   unsigned long m_nbVertices;
+  /**
+   * \var glm::m_minVert
+   * \brief Coordonnées minimales (bounding box)
+   */
+  glm::vec3 m_minVert;
+  /**
+   * \var glm::vec3 m_maxVert
+   * \brief Coordonnées maximales (bounding box)
+   */
+  glm::vec3 m_maxVert;
+  
+  
 };
 
 #endif

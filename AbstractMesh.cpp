@@ -2,7 +2,7 @@
 #include <vector>
 
 AbstractMesh::AbstractMesh(Shader *shader, Texture* texture) :
-    AbstractGraphicObject(shader), m_texture(texture)
+    AbstractGraphicObject(shader), m_texture(texture), m_minVert(0), m_maxVert(0)
 {
 }
 
@@ -47,4 +47,22 @@ void AbstractMesh::cleanUp()
 {
   m_coordTex.clear();
   AbstractGraphicObject::cleanUp();
+}
+
+void AbstractMesh::updateBoundingBox(float x, float y, float z)
+{
+  if(x > m_maxVert.x)
+    m_maxVert.x = x;
+  else if(x < m_minVert.x)
+    m_minVert.x = x;
+  
+  if(y > m_maxVert.y)
+    m_maxVert.y = y;
+  else if(y < m_minVert.y)
+    m_minVert.y = y;
+  
+  if(z > m_maxVert.z)
+    m_maxVert.z = z;
+  else if(z < m_minVert.z)
+    m_minVert.z = z;
 }

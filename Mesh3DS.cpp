@@ -37,10 +37,10 @@ void Mesh3DS::extractPoints(Lib3dsMesh* mesh, Lib3dsFace* face)
 {
   for(unsigned j=0; j < 3 ; j++ )
   {
-    
     m_vertices.push_back(mesh->pointL[face->points[j]].pos[0]);
     m_vertices.push_back(mesh->pointL[face->points[j]].pos[1]);
     m_vertices.push_back(mesh->pointL[face->points[j]].pos[2]);
+    updateBoundingBox(mesh->pointL[face->points[j]].pos[0], mesh->pointL[face->points[j]].pos[1], mesh->pointL[face->points[j]].pos[2]);
     if(mesh->texels)
     {
       m_coordTex.push_back(mesh->texelL[face->points[j]][0]);

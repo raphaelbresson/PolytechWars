@@ -7,6 +7,10 @@ Sphere::Sphere(float radius, unsigned int nbLat,unsigned int nbLong,Shader *shad
 
 Sphere::~Sphere()
 { 
+  if( glIsBuffer(m_vboCoordTextID) == GL_TRUE)
+    glDeleteBuffers(1,&m_vboCoordTextID);
+  if(glIsBuffer(m_indexesID) == GL_TRUE)
+    glDeleteBuffers(1,&m_indexesID);
 }
 
 void Sphere::load()

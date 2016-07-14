@@ -1,0 +1,11 @@
+<map id="AbstractMesh.h" name="AbstractMesh.h">
+<area shape="rect" id="node2" href="$MeshNode_8h.html" title="Définition de la classe de gestion de modèles 3D. " alt="" coords="41,155,137,181"/>
+<area shape="rect" id="node7" href="$Mesh3DS_8h.html" title="Définition d&#39;un mesh d&#39;un modèle 3DS. " alt="" coords="167,80,258,107"/>
+<area shape="rect" id="node9" href="$Skybox_8h.html" title="Simulation d&#39;environnement via skybox monotexturée. " alt="" coords="281,155,358,181"/>
+<area shape="rect" id="node10" href="$Sphere_8h.html" title="Implémentation d&#39;une sphère texturée. " alt="" coords="354,80,429,107"/>
+<area shape="rect" id="node3" href="$CameraFlightSimulator_8h.html" title="Implémentation de la caméra de simulateur de vol. " alt="" coords="5,229,172,256"/>
+<area shape="rect" id="node6" href="$MeshFactory_8h.html" title="Construction d&#39;objets 3D et gestion des shaders. " alt="" coords="197,229,306,256"/>
+<area shape="rect" id="node4" href="$SceneManager_8h.html" title="Gestion des modèles et de l&#39;affichage. " alt="" coords="110,304,230,331"/>
+<area shape="rect" id="node5" href="$ApplicationControl_8h.html" title="Gestion de la SDL et de OpenGL ainsi que du SceneManager. " alt="" coords="101,379,239,405"/>
+<area shape="rect" id="node8" href="$Model3DS_8h.html" title="Importation d&#39;un modèle 3D depuis le format 3DS MAX (sans les animations) " alt="" coords="161,155,256,181"/>
+</map>

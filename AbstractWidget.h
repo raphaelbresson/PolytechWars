@@ -12,7 +12,7 @@ class AbstractWidget: public AbstractGraphicObject
 {
 public:
   /**
-   * \fn AbstractWidget(glm::vec2 position)
+   * \fn AbstractWidget(Shader *shader,glm::vec2 position)
    * \brief Crée un objet 2D à la position sur l'écran indiquée en argument
    */
   AbstractWidget(Shader *shader,glm::vec2 position): AbstractGraphicObject(shader), m_position(position) {}

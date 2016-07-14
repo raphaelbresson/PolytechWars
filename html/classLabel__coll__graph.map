@@ -1,0 +1,7 @@
+<map id="Label" name="Label">
+<area shape="rect" id="node2" href="$classAbstractWidget.html" title="Classe abstraite mère de tous les objets 2D. " alt="" coords="39,171,151,197"/>
+<area shape="rect" id="node3" href="$classAbstractGraphicObject.html" title="Classe abstraite définissant un type polymorphe pour les objets graphiques. " alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node4" href="$classShader.html" title="Classe de gestion de programmes shaders (compilation, édition de liens, contrôle et destruction) ..." alt="" coords="51,5,114,32"/>
+<area shape="rect" id="node5" href="$classFont.html" title="Gère la conversion de texte en texture GL à partir d&#39;une police. " alt="" coords="189,171,237,197"/>
+<area shape="rect" id="node6" href="$classTexture.html" title="Gère les textures OpenGL et leur importation via une image ou une police. " alt="" coords="184,95,251,121"/>
+</map>

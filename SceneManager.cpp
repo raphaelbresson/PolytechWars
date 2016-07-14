@@ -3,7 +3,7 @@
 /*
  * CONSTRUCTEUR
  */
-SceneManager::SceneManager(): m_cameras(),m_activeCamera(0), m_input(), m_guiFact(), m_meshFact(), m_soundMgr()
+SceneManager::SceneManager(int h): m_cameras(),m_activeCamera(0), m_input(h), m_guiFact(), m_meshFact(), m_soundMgr()
 {
 }
 
@@ -195,5 +195,6 @@ bool SceneManager::execute(SDL_Window* window, unsigned int w, unsigned int h)
     if(time < period)
       SDL_Delay((unsigned int)(period - time));  					/* ON LIMITE LA FREQUENCE A 60 FPS */
   }
+  printf("toto\n");
   return true;
 }

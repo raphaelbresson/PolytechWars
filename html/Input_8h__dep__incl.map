@@ -1,0 +1,8 @@
+<map id="Input.h" name="Input.h">
+<area shape="rect" id="node2" href="$AbstractButton_8h.html" title="Définit un type polymorphe pour les boutons. " alt="" coords="21,80,141,107"/>
+<area shape="rect" id="node3" href="$AbstractCamera_8h.html" title="Définit un type polymorphe pour les caméras. " alt="" coords="165,80,293,107"/>
+<area shape="rect" id="node5" href="$SceneManager_8h.html" title="Gestion des modèles et de l&#39;affichage. " alt="" coords="195,229,315,256"/>
+<area shape="rect" id="node6" href="$ApplicationControl_8h.html" title="Gestion de la SDL et de OpenGL ainsi que du SceneManager. " alt="" coords="253,304,391,331"/>
+<area shape="rect" id="node4" href="$CameraFPS_8h.html" title="Définition de la caméra à la première personne. " alt="" coords="5,155,111,181"/>
+<area shape="rect" id="node7" href="$CameraFlightSimulator_8h.html" title="Implémentation de la caméra de simulateur de vol. " alt="" coords="135,155,301,181"/>
+</map>

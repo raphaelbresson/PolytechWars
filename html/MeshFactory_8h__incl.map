@@ -1,0 +1,12 @@
+<map id="MeshFactory.h" name="MeshFactory.h">
+<area shape="rect" id="node2" href="$MeshNode_8h.html" title="Définition de la classe de gestion de modèles 3D. " alt="" coords="429,155,525,181"/>
+<area shape="rect" id="node22" href="$Model3DS_8h.html" title="Importation d&#39;un modèle 3D depuis le format 3DS MAX (sans les animations) " alt="" coords="725,80,819,107"/>
+<area shape="rect" id="node30" href="$Skybox_8h.html" title="Simulation d&#39;environnement via skybox monotexturée. " alt="" coords="549,155,627,181"/>
+<area shape="rect" id="node31" href="$Sphere_8h.html" title="Implémentation d&#39;une sphère texturée. " alt="" coords="625,80,700,107"/>
+<area shape="rect" id="node3" href="$AbstractMesh_8h.html" title="Définition d&#39;un type polymorphe pour les modèles 3D. " alt="" coords="461,229,576,256"/>
+<area shape="rect" id="node4" href="$AbstractGraphicObject_8h.html" title="Définit un type polymorphe pour les objets graphiques. " alt="" coords="559,304,724,331"/>
+<area shape="rect" id="node18" href="$Texture_8h.html" title="Gestion des textures. " alt="" coords="407,379,484,405"/>
+<area shape="rect" id="node7" href="$Include__GL__and__GLM_8h.html" title="Inclusion des header de OpenGL 3 et GLM. " alt="" coords="560,453,723,480"/>
+<area shape="rect" id="node12" href="$Shader_8h.html" title="Gestion des Shaders (Programmes pour le GPU) " alt="" coords="884,379,959,405"/>
+<area shape="rect" id="node23" href="$Mesh3DS_8h.html" title="Définition d&#39;un mesh d&#39;un modèle 3DS. " alt="" coords="780,155,871,181"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="Label.h" name="Label.h">
+<area shape="rect" id="node2" href="$Font_8h.html" title="Gestion de la génération de texte. " alt="" coords="505,80,564,107"/>
+<area shape="rect" id="node14" href="$Shader_8h.html" title="Gestion des Shaders (Programmes pour le GPU) " alt="" coords="836,229,911,256"/>
+<area shape="rect" id="node20" href="$AbstractWidget_8h.html" title="Définit un type polymorphe pour les objets 2D. " alt="" coords="593,80,716,107"/>
+<area shape="rect" id="node3" href="$Texture_8h.html" title="Gestion des textures. " alt="" coords="403,229,480,256"/>
+<area shape="rect" id="node8" href="$Include__GL__and__GLM_8h.html" title="Inclusion des header de OpenGL 3 et GLM. " alt="" coords="656,304,819,331"/>
+<area shape="rect" id="node21" href="$AbstractGraphicObject_8h.html" title="Définit un type polymorphe pour les objets graphiques. " alt="" coords="572,155,737,181"/>
+</map>

@@ -1,101 +1,104 @@
-\hypertarget{classAbstractCamera}{\section{Abstract\-Camera Class Reference}
-\label{classAbstractCamera}\index{Abstract\-Camera@{Abstract\-Camera}}
+\hypertarget{classAbstractCamera}{\section{Abstract\+Camera Class Reference}
+\label{classAbstractCamera}\index{Abstract\+Camera@{Abstract\+Camera}}
 }
 
 
-Type polymorphe pour les caméras (point de vue sur le monde 3\-D)  
+Type polymorphe pour les caméras (point de vue sur le monde 3\+D)  
 
 
 
 
-{\ttfamily \#include $<$Abstract\-Camera.\-h$>$}
+{\ttfamily \#include $<$Abstract\+Camera.\+h$>$}
 
-Inheritance diagram for Abstract\-Camera\-:\begin{figure}[H]
+
+
+Inheritance diagram for Abstract\+Camera\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classAbstractCamera}
+\includegraphics[width=286pt]{classAbstractCamera__inherit__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAbstractCamera_a880ce099ca5cba2cb9baada64fb605b5}{\hyperlink{classAbstractCamera_a880ce099ca5cba2cb9baada64fb605b5}{Abstract\-Camera} (glm\-::vec3 const \&position, glm\-::vec3 const \&axe\-\_\-vertical, glm\-::vec3 const \&cible, float proche, float loin, float ratio\-Resolution)}\label{classAbstractCamera_a880ce099ca5cba2cb9baada64fb605b5}
+\hypertarget{classAbstractCamera_a880ce099ca5cba2cb9baada64fb605b5}{\hyperlink{classAbstractCamera_a880ce099ca5cba2cb9baada64fb605b5}{Abstract\+Camera} (glm\+::vec3 const \&position, glm\+::vec3 const \&axe\+\_\+vertical, glm\+::vec3 const \&cible, float proche, float loin, float ratio\+Resolution)}\label{classAbstractCamera_a880ce099ca5cba2cb9baada64fb605b5}
 
 \begin{DoxyCompactList}\small\item\em Construit une caméra et l'initialise en fonction de sa position de son axe vertical et de son point ciblé \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_addf550f9f41d04bd6651b19d795bdabe}{virtual \hyperlink{classAbstractCamera_addf550f9f41d04bd6651b19d795bdabe}{$\sim$\-Abstract\-Camera} ()}\label{classAbstractCamera_addf550f9f41d04bd6651b19d795bdabe}
+\hypertarget{classAbstractCamera_addf550f9f41d04bd6651b19d795bdabe}{virtual \hyperlink{classAbstractCamera_addf550f9f41d04bd6651b19d795bdabe}{$\sim$\+Abstract\+Camera} ()}\label{classAbstractCamera_addf550f9f41d04bd6651b19d795bdabe}
 
 \begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a12f6c58003bece7aa6cb66108a1cbeb1}{virtual void \hyperlink{classAbstractCamera_a12f6c58003bece7aa6cb66108a1cbeb1}{look\-At} ()}\label{classAbstractCamera_a12f6c58003bece7aa6cb66108a1cbeb1}
+\hypertarget{classAbstractCamera_a12f6c58003bece7aa6cb66108a1cbeb1}{virtual void \hyperlink{classAbstractCamera_a12f6c58003bece7aa6cb66108a1cbeb1}{look\+At} ()}\label{classAbstractCamera_a12f6c58003bece7aa6cb66108a1cbeb1}
 
 \begin{DoxyCompactList}\small\item\em Méthode virtuelle qui doit construire et retourner la matrice de modelview. \end{DoxyCompactList}\item 
 \hypertarget{classAbstractCamera_a7d34830e280d6c40ce3ff22583054880}{virtual void \hyperlink{classAbstractCamera_a7d34830e280d6c40ce3ff22583054880}{perspective} ()}\label{classAbstractCamera_a7d34830e280d6c40ce3ff22583054880}
 
 \begin{DoxyCompactList}\small\item\em Méthode virtuelle pure qui doit construire et retourner la matrice de projection. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a5dab83f71c638eda31fc49db01f47180}{virtual void \hyperlink{classAbstractCamera_a5dab83f71c638eda31fc49db01f47180}{on\-Event} (\hyperlink{classInput}{Input} const \&input)=0}\label{classAbstractCamera_a5dab83f71c638eda31fc49db01f47180}
+\hypertarget{classAbstractCamera_a5dab83f71c638eda31fc49db01f47180}{virtual void \hyperlink{classAbstractCamera_a5dab83f71c638eda31fc49db01f47180}{on\+Event} (\hyperlink{classInput}{Input} const \&input)=0}\label{classAbstractCamera_a5dab83f71c638eda31fc49db01f47180}
 
 \begin{DoxyCompactList}\small\item\em Méthode virtuelle pure qui traite les évênements pour la caméra appelée à chaque tour de boucle. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a650255e1796dd50a2d95baa8c28fefae}{glm\-::mat4 \hyperlink{classAbstractCamera_a650255e1796dd50a2d95baa8c28fefae}{get\-Projection} () const }\label{classAbstractCamera_a650255e1796dd50a2d95baa8c28fefae}
+\hypertarget{classAbstractCamera_a650255e1796dd50a2d95baa8c28fefae}{glm\+::mat4 \hyperlink{classAbstractCamera_a650255e1796dd50a2d95baa8c28fefae}{get\+Projection} () const }\label{classAbstractCamera_a650255e1796dd50a2d95baa8c28fefae}
 
 \begin{DoxyCompactList}\small\item\em retourne la matrice de projection \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a31fa7a470de4ecd2437905ffd57cb40b}{glm\-::mat4 \hyperlink{classAbstractCamera_a31fa7a470de4ecd2437905ffd57cb40b}{get\-Modelview} () const }\label{classAbstractCamera_a31fa7a470de4ecd2437905ffd57cb40b}
+\hypertarget{classAbstractCamera_a31fa7a470de4ecd2437905ffd57cb40b}{glm\+::mat4 \hyperlink{classAbstractCamera_a31fa7a470de4ecd2437905ffd57cb40b}{get\+Modelview} () const }\label{classAbstractCamera_a31fa7a470de4ecd2437905ffd57cb40b}
 
 \begin{DoxyCompactList}\small\item\em retourne la matrice de modelview \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_ae6a61c6c50ffc278ad66f332e19e66a6}{virtual glm\-::vec3 \hyperlink{classAbstractCamera_ae6a61c6c50ffc278ad66f332e19e66a6}{get\-Position} () const =0}\label{classAbstractCamera_ae6a61c6c50ffc278ad66f332e19e66a6}
+\hypertarget{classAbstractCamera_ae6a61c6c50ffc278ad66f332e19e66a6}{virtual glm\+::vec3 \hyperlink{classAbstractCamera_ae6a61c6c50ffc278ad66f332e19e66a6}{get\+Position} () const =0}\label{classAbstractCamera_ae6a61c6c50ffc278ad66f332e19e66a6}
 
 \begin{DoxyCompactList}\small\item\em Méthode virtuelle pure qui retourne la position. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a1991c1773cda1eb142c9d127cf6e4107}{float \hyperlink{classAbstractCamera_a1991c1773cda1eb142c9d127cf6e4107}{get\-Vitesse} () const }\label{classAbstractCamera_a1991c1773cda1eb142c9d127cf6e4107}
+\hypertarget{classAbstractCamera_a1991c1773cda1eb142c9d127cf6e4107}{float \hyperlink{classAbstractCamera_a1991c1773cda1eb142c9d127cf6e4107}{get\+Vitesse} () const }\label{classAbstractCamera_a1991c1773cda1eb142c9d127cf6e4107}
 
 \begin{DoxyCompactList}\small\item\em Retourne la vitesse. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a625cd232811561751bd57493e2eadd20}{bool \hyperlink{classAbstractCamera_a625cd232811561751bd57493e2eadd20}{is\-Active} () const }\label{classAbstractCamera_a625cd232811561751bd57493e2eadd20}
+\hypertarget{classAbstractCamera_a625cd232811561751bd57493e2eadd20}{bool \hyperlink{classAbstractCamera_a625cd232811561751bd57493e2eadd20}{is\+Active} () const }\label{classAbstractCamera_a625cd232811561751bd57493e2eadd20}
 
 \begin{DoxyCompactList}\small\item\em Savoir si la caméra est active(true) ou non(false) \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a0c7bbb7102072e5776646cb8ef04603f}{void \hyperlink{classAbstractCamera_a0c7bbb7102072e5776646cb8ef04603f}{set\-Active} (bool active)}\label{classAbstractCamera_a0c7bbb7102072e5776646cb8ef04603f}
+\hypertarget{classAbstractCamera_a0c7bbb7102072e5776646cb8ef04603f}{void \hyperlink{classAbstractCamera_a0c7bbb7102072e5776646cb8ef04603f}{set\+Active} (bool active)}\label{classAbstractCamera_a0c7bbb7102072e5776646cb8ef04603f}
 
 \begin{DoxyCompactList}\small\item\em Déterminer si la caméra est active(true) ou non(false) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAbstractCamera_a0a7cf1e2ab478c3b2a375fdd8d298cdc}{glm\-::vec3 \hyperlink{classAbstractCamera_a0a7cf1e2ab478c3b2a375fdd8d298cdc}{m\-\_\-position}}\label{classAbstractCamera_a0a7cf1e2ab478c3b2a375fdd8d298cdc}
+\hypertarget{classAbstractCamera_a0a7cf1e2ab478c3b2a375fdd8d298cdc}{glm\+::vec3 \hyperlink{classAbstractCamera_a0a7cf1e2ab478c3b2a375fdd8d298cdc}{m\+\_\+position}}\label{classAbstractCamera_a0a7cf1e2ab478c3b2a375fdd8d298cdc}
 
-\begin{DoxyCompactList}\small\item\em Position de la caméra dans le monde 3\-D. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a9809fe9917c78f701bbda73a116b11cb}{glm\-::vec3 \hyperlink{classAbstractCamera_a9809fe9917c78f701bbda73a116b11cb}{m\-\_\-axe\-\_\-vertical}}\label{classAbstractCamera_a9809fe9917c78f701bbda73a116b11cb}
+\begin{DoxyCompactList}\small\item\em Position de la caméra dans le monde 3\+D. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractCamera_a9809fe9917c78f701bbda73a116b11cb}{glm\+::vec3 \hyperlink{classAbstractCamera_a9809fe9917c78f701bbda73a116b11cb}{m\+\_\+axe\+\_\+vertical}}\label{classAbstractCamera_a9809fe9917c78f701bbda73a116b11cb}
 
 \begin{DoxyCompactList}\small\item\em Axe vertical de la caméra. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_aee9a00d7b11559a5448abbfa751a6d96}{glm\-::vec3 \hyperlink{classAbstractCamera_aee9a00d7b11559a5448abbfa751a6d96}{m\-\_\-cible}}\label{classAbstractCamera_aee9a00d7b11559a5448abbfa751a6d96}
+\hypertarget{classAbstractCamera_aee9a00d7b11559a5448abbfa751a6d96}{glm\+::vec3 \hyperlink{classAbstractCamera_aee9a00d7b11559a5448abbfa751a6d96}{m\+\_\+cible}}\label{classAbstractCamera_aee9a00d7b11559a5448abbfa751a6d96}
 
 \begin{DoxyCompactList}\small\item\em Point ciblé par la caméra. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a16b6278ac154b9869c605131bab89d74}{glm\-::vec3 \hyperlink{classAbstractCamera_a16b6278ac154b9869c605131bab89d74}{m\-\_\-orientation}}\label{classAbstractCamera_a16b6278ac154b9869c605131bab89d74}
+\hypertarget{classAbstractCamera_a16b6278ac154b9869c605131bab89d74}{glm\+::vec3 \hyperlink{classAbstractCamera_a16b6278ac154b9869c605131bab89d74}{m\+\_\+orientation}}\label{classAbstractCamera_a16b6278ac154b9869c605131bab89d74}
 
 \begin{DoxyCompactList}\small\item\em Vecteur orientation de la caméra. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a67b386323421b56e7e123d74c0d8e990}{glm\-::vec3 \hyperlink{classAbstractCamera_a67b386323421b56e7e123d74c0d8e990}{m\-\_\-droite}}\label{classAbstractCamera_a67b386323421b56e7e123d74c0d8e990}
+\hypertarget{classAbstractCamera_a67b386323421b56e7e123d74c0d8e990}{glm\+::vec3 \hyperlink{classAbstractCamera_a67b386323421b56e7e123d74c0d8e990}{m\+\_\+droite}}\label{classAbstractCamera_a67b386323421b56e7e123d74c0d8e990}
 
 \begin{DoxyCompactList}\small\item\em Vecteur normal à l'orientation et à l'axe vertical -\/$>$ deplacement lateral. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a302613d43b644880473e964ede5c6094}{float \hyperlink{classAbstractCamera_a302613d43b644880473e964ede5c6094}{m\-\_\-proche}}\label{classAbstractCamera_a302613d43b644880473e964ede5c6094}
+\hypertarget{classAbstractCamera_a302613d43b644880473e964ede5c6094}{float \hyperlink{classAbstractCamera_a302613d43b644880473e964ede5c6094}{m\+\_\+proche}}\label{classAbstractCamera_a302613d43b644880473e964ede5c6094}
 
 \begin{DoxyCompactList}\small\item\em Distance minimale de la caméra pour affichage. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a29c540279b97ed810fdd7afd65bf6b4e}{float \hyperlink{classAbstractCamera_a29c540279b97ed810fdd7afd65bf6b4e}{m\-\_\-loin}}\label{classAbstractCamera_a29c540279b97ed810fdd7afd65bf6b4e}
+\hypertarget{classAbstractCamera_a29c540279b97ed810fdd7afd65bf6b4e}{float \hyperlink{classAbstractCamera_a29c540279b97ed810fdd7afd65bf6b4e}{m\+\_\+loin}}\label{classAbstractCamera_a29c540279b97ed810fdd7afd65bf6b4e}
 
 \begin{DoxyCompactList}\small\item\em Distance maximale de la caméra pour affichage. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_ac4dccb042e77bb91c2aa66a315112043}{float \hyperlink{classAbstractCamera_ac4dccb042e77bb91c2aa66a315112043}{m\-\_\-ratio\-Resolution}}\label{classAbstractCamera_ac4dccb042e77bb91c2aa66a315112043}
+\hypertarget{classAbstractCamera_ac4dccb042e77bb91c2aa66a315112043}{float \hyperlink{classAbstractCamera_ac4dccb042e77bb91c2aa66a315112043}{m\+\_\+ratio\+Resolution}}\label{classAbstractCamera_ac4dccb042e77bb91c2aa66a315112043}
 
 \begin{DoxyCompactList}\small\item\em Largeur de la fenêtre / Hauteur de la fenêtre. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_a554f06bd5f27d68700f844cc4e6b7dba}{float \hyperlink{classAbstractCamera_a554f06bd5f27d68700f844cc4e6b7dba}{m\-\_\-vitesse}}\label{classAbstractCamera_a554f06bd5f27d68700f844cc4e6b7dba}
+\hypertarget{classAbstractCamera_a554f06bd5f27d68700f844cc4e6b7dba}{float \hyperlink{classAbstractCamera_a554f06bd5f27d68700f844cc4e6b7dba}{m\+\_\+vitesse}}\label{classAbstractCamera_a554f06bd5f27d68700f844cc4e6b7dba}
 
 \begin{DoxyCompactList}\small\item\em Vitesse de déplacement de la caméra. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_aa99260e08a54ece7bcfc81ca44baf82c}{glm\-::mat4 \hyperlink{classAbstractCamera_aa99260e08a54ece7bcfc81ca44baf82c}{m\-\_\-projection}}\label{classAbstractCamera_aa99260e08a54ece7bcfc81ca44baf82c}
+\hypertarget{classAbstractCamera_aa99260e08a54ece7bcfc81ca44baf82c}{glm\+::mat4 \hyperlink{classAbstractCamera_aa99260e08a54ece7bcfc81ca44baf82c}{m\+\_\+projection}}\label{classAbstractCamera_aa99260e08a54ece7bcfc81ca44baf82c}
 
 \begin{DoxyCompactList}\small\item\em Matrice de projection. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_aa26d2fe7b5921b46c5721e17e3a05c15}{glm\-::mat4 \hyperlink{classAbstractCamera_aa26d2fe7b5921b46c5721e17e3a05c15}{m\-\_\-modelview}}\label{classAbstractCamera_aa26d2fe7b5921b46c5721e17e3a05c15}
+\hypertarget{classAbstractCamera_aa26d2fe7b5921b46c5721e17e3a05c15}{glm\+::mat4 \hyperlink{classAbstractCamera_aa26d2fe7b5921b46c5721e17e3a05c15}{m\+\_\+modelview}}\label{classAbstractCamera_aa26d2fe7b5921b46c5721e17e3a05c15}
 
 \begin{DoxyCompactList}\small\item\em Matrice de modelview. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractCamera_ad40646721bbb5ec24fe9fb2080763e51}{bool \hyperlink{classAbstractCamera_ad40646721bbb5ec24fe9fb2080763e51}{m\-\_\-active}}\label{classAbstractCamera_ad40646721bbb5ec24fe9fb2080763e51}
+\hypertarget{classAbstractCamera_ad40646721bbb5ec24fe9fb2080763e51}{bool \hyperlink{classAbstractCamera_ad40646721bbb5ec24fe9fb2080763e51}{m\+\_\+active}}\label{classAbstractCamera_ad40646721bbb5ec24fe9fb2080763e51}
 
 \begin{DoxyCompactList}\small\item\em Détermine si la caméra est active ou non. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Type polymorphe pour les caméras (point de vue sur le monde 3\-D) 
+Type polymorphe pour les caméras (point de vue sur le monde 3\+D) 
 
-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{AbstractCamera_8h}{Abstract\-Camera.\-h}\end{DoxyCompactItemize}
+\hyperlink{AbstractCamera_8h}{Abstract\+Camera.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="Font.h" name="Font.h">
+<area shape="rect" id="node2" href="$Label_8h.html" title="Gestion de l&#39;affichage de texte. " alt="" coords="43,80,107,107"/>
+<area shape="rect" id="node3" href="$GuiFactory_8h.html" title="Gestion de la construction des objets 2D. " alt="" coords="26,155,123,181"/>
+<area shape="rect" id="node4" href="$SceneManager_8h.html" title="Gestion des modèles et de l&#39;affichage. " alt="" coords="15,229,135,256"/>
+<area shape="rect" id="node5" href="$ApplicationControl_8h.html" title="Gestion de la SDL et de OpenGL ainsi que du SceneManager. " alt="" coords="5,304,144,331"/>
+</map>

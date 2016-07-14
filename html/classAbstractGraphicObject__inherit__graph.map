@@ -1,0 +1,10 @@
+<map id="AbstractGraphicObject" name="AbstractGraphicObject">
+<area shape="rect" id="node2" href="$classAbstractMesh.html" title="Type polymorphe pour les modèles 3D. " alt="" coords="198,80,301,107"/>
+<area shape="rect" id="node7" href="$classAbstractWidget.html" title="Classe abstraite mère de tous les objets 2D. " alt="" coords="393,80,505,107"/>
+<area shape="rect" id="node3" href="$classMesh3DS.html" title="Mesh d&#39;un modèle 3DS. " alt="" coords="5,155,85,181"/>
+<area shape="rect" id="node4" href="$classModel3DS.html" title="Gestion des modèle 3DS. " alt="" coords="109,155,192,181"/>
+<area shape="rect" id="node5" href="$classSkybox.html" title="Cube avec textures de ciel plaquées. " alt="" coords="216,155,283,181"/>
+<area shape="rect" id="node6" href="$classSphere.html" title="Définition d&#39;une sphère texturée. " alt="" coords="307,155,370,181"/>
+<area shape="rect" id="node8" href="$classAbstractButton.html" title="Type polymorphe pour les boutons. " alt="" coords="395,155,504,181"/>
+<area shape="rect" id="node9" href="$classLabel.html" title="Représente un objet Texte 2D. " alt="" coords="528,155,581,181"/>
+</map>

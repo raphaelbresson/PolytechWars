@@ -6,14 +6,26 @@
 bool ApplicationControl::initSDL()
 {
   if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0)
+  {
+    fprintf(stderr,"Erreur lors de l'initialisation de la SDL:%s\n", SDL_GetError());
     return false;
+  }
   if(IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF) < 0)
+  {
+    fprintf(stderr,"Erreur lors de l'initialisation de la SDL image:%s\n", SDL_GetError());
     return false;
+  }
   if(TTF_Init() ==-1)
+  {
+    fprintf(stderr,"Erreur lors de l'initialisation de la SDL TTF:%s\n",SDL_GetError());
     return false;
-  if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096)==-1) 
+  }
+  if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096)==-1)
+  {
+    fprintf(stderr,"Erreur lors de l'initialisation de la SDL Mixer:%s\n", SDL_GetError()); 
     return false;
-  return true;  
+  }
+  return true;
 }
 
 /*
@@ -34,6 +46,7 @@ bool ApplicationControl::initGL()
   if(m_context == 0)
     return false;
   glEnable(GL_DEPTH_TEST);
+  //-----------A FAIRE MIGRER AILLEURS POUR PLUS DE CONTROLE
   SDL_ShowCursor(SDL_DISABLE);
   SDL_SetRelativeMouseMode(SDL_TRUE);
   return true;
@@ -43,7 +56,7 @@ bool ApplicationControl::initGL()
  * Constructeur
  */
 ApplicationControl::ApplicationControl(unsigned int windowWidth, unsigned int windowHeight) : 
-  m_windowWidth(windowWidth) , m_windowHeight(windowHeight), m_sceneMgr(), m_window(NULL), m_context(0)
+  m_windowWidth(windowWidth) , m_windowHeight(windowHeight), m_sceneMgr(windowHeight), m_window(NULL), m_context(0)
 {
 }
 

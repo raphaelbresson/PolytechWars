@@ -1,57 +1,69 @@
-\hypertarget{classAbstractMesh}{\section{Abstract\-Mesh Class Reference}
-\label{classAbstractMesh}\index{Abstract\-Mesh@{Abstract\-Mesh}}
+\hypertarget{classAbstractMesh}{\section{Abstract\+Mesh Class Reference}
+\label{classAbstractMesh}\index{Abstract\+Mesh@{Abstract\+Mesh}}
 }
 
 
-Type polymorphe pour les modèles 3\-D.  
+Type polymorphe pour les modèles 3\+D.  
 
 
 
 
-{\ttfamily \#include $<$Abstract\-Mesh.\-h$>$}
+{\ttfamily \#include $<$Abstract\+Mesh.\+h$>$}
 
-Inheritance diagram for Abstract\-Mesh\-:\begin{figure}[H]
+
+
+Inheritance diagram for Abstract\+Mesh\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.818792cm]{classAbstractMesh}
+\includegraphics[width=350pt]{classAbstractMesh__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Abstract\+Mesh\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classAbstractMesh__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAbstractMesh_ade7bd3d65928c4676be31263bafc8a71}{\hyperlink{classAbstractMesh_ade7bd3d65928c4676be31263bafc8a71}{Abstract\-Mesh} (\hyperlink{classShader}{Shader} $\ast$shader, \hyperlink{classTexture}{Texture} $\ast$texture)}\label{classAbstractMesh_ade7bd3d65928c4676be31263bafc8a71}
+\hypertarget{classAbstractMesh_ade7bd3d65928c4676be31263bafc8a71}{\hyperlink{classAbstractMesh_ade7bd3d65928c4676be31263bafc8a71}{Abstract\+Mesh} (\hyperlink{classShader}{Shader} $\ast$shader, \hyperlink{classTexture}{Texture} $\ast$texture)}\label{classAbstractMesh_ade7bd3d65928c4676be31263bafc8a71}
 
 \begin{DoxyCompactList}\small\item\em Constructeur à partir de la texture donnés en argument. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractMesh_a6a2a3bd0e2e321707ec7fef7ff933ba6}{\hyperlink{classAbstractMesh_a6a2a3bd0e2e321707ec7fef7ff933ba6}{Abstract\-Mesh} (\hyperlink{classAbstractMesh}{Abstract\-Mesh} $\ast$mesh)}\label{classAbstractMesh_a6a2a3bd0e2e321707ec7fef7ff933ba6}
+\hypertarget{classAbstractMesh_a6a2a3bd0e2e321707ec7fef7ff933ba6}{\hyperlink{classAbstractMesh_a6a2a3bd0e2e321707ec7fef7ff933ba6}{Abstract\+Mesh} (\hyperlink{classAbstractMesh}{Abstract\+Mesh} $\ast$mesh)}\label{classAbstractMesh_a6a2a3bd0e2e321707ec7fef7ff933ba6}
 
 \begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
 \hypertarget{classAbstractMesh_a9688f69d4431eb08c7b65693d0fffd9e}{virtual void \hyperlink{classAbstractMesh_a9688f69d4431eb08c7b65693d0fffd9e}{load} ()}\label{classAbstractMesh_a9688f69d4431eb08c7b65693d0fffd9e}
 
-\begin{DoxyCompactList}\small\item\em Construit les objets Open\-G\-L (vbo et vao) pour ce modèle. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractMesh_aef065877afe59562920748e265196c82}{virtual void \hyperlink{classAbstractMesh_aef065877afe59562920748e265196c82}{draw} (glm\-::mat4 mvp)=0}\label{classAbstractMesh_aef065877afe59562920748e265196c82}
+\begin{DoxyCompactList}\small\item\em Construit les objets Open\+G\+L (vbo et vao) pour ce modèle. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractMesh_aef065877afe59562920748e265196c82}{virtual void \hyperlink{classAbstractMesh_aef065877afe59562920748e265196c82}{draw} (glm\+::mat4 mvp)=0}\label{classAbstractMesh_aef065877afe59562920748e265196c82}
 
-\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure qui affiche le mesh en fonction de la matrice de modelview\-Projection. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractMesh_a996ae58b3352c31f834a07ab0b071d6c}{virtual void \hyperlink{classAbstractMesh_a996ae58b3352c31f834a07ab0b071d6c}{clean\-Up} ()}\label{classAbstractMesh_a996ae58b3352c31f834a07ab0b071d6c}
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure qui affiche le mesh en fonction de la matrice de modelview\+Projection. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractMesh_a996ae58b3352c31f834a07ab0b071d6c}{virtual void \hyperlink{classAbstractMesh_a996ae58b3352c31f834a07ab0b071d6c}{clean\+Up} ()}\label{classAbstractMesh_a996ae58b3352c31f834a07ab0b071d6c}
 
 \begin{DoxyCompactList}\small\item\em Détruit les objets de construction intermédiaires. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAbstractMesh_a15e43124d601085e1495c738a657c826}{std\-::vector$<$ float $>$ \hyperlink{classAbstractMesh_a15e43124d601085e1495c738a657c826}{m\-\_\-coord\-Tex}}\label{classAbstractMesh_a15e43124d601085e1495c738a657c826}
+\hypertarget{classAbstractMesh_a15e43124d601085e1495c738a657c826}{std\+::vector$<$ float $>$ \hyperlink{classAbstractMesh_a15e43124d601085e1495c738a657c826}{m\+\_\+coord\+Tex}}\label{classAbstractMesh_a15e43124d601085e1495c738a657c826}
 
 \begin{DoxyCompactList}\small\item\em Tableau de coordonnées de textures. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractMesh_a0bcd16f81880e90b11781bb61af294cf}{\hyperlink{classTexture}{Texture} $\ast$ \hyperlink{classAbstractMesh_a0bcd16f81880e90b11781bb61af294cf}{m\-\_\-texture}}\label{classAbstractMesh_a0bcd16f81880e90b11781bb61af294cf}
+\hypertarget{classAbstractMesh_a0bcd16f81880e90b11781bb61af294cf}{\hyperlink{classTexture}{Texture} $\ast$ \hyperlink{classAbstractMesh_a0bcd16f81880e90b11781bb61af294cf}{m\+\_\+texture}}\label{classAbstractMesh_a0bcd16f81880e90b11781bb61af294cf}
 
 \begin{DoxyCompactList}\small\item\em \hyperlink{classTexture}{Texture} de l'objet. \end{DoxyCompactList}\item 
-\hypertarget{classAbstractMesh_a07951f17a49c5a02a895ca6cbdd3b0c5}{unsigned long \hyperlink{classAbstractMesh_a07951f17a49c5a02a895ca6cbdd3b0c5}{m\-\_\-nb\-Vertices}}\label{classAbstractMesh_a07951f17a49c5a02a895ca6cbdd3b0c5}
+\hypertarget{classAbstractMesh_a07951f17a49c5a02a895ca6cbdd3b0c5}{unsigned long \hyperlink{classAbstractMesh_a07951f17a49c5a02a895ca6cbdd3b0c5}{m\+\_\+nb\+Vertices}}\label{classAbstractMesh_a07951f17a49c5a02a895ca6cbdd3b0c5}
 
 \begin{DoxyCompactList}\small\item\em Nombre de vertices de ce mesh. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Type polymorphe pour les modèles 3\-D. 
+Type polymorphe pour les modèles 3\+D. 
 
-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{AbstractMesh_8h}{Abstract\-Mesh.\-h}\item 
-Abstract\-Mesh.\-cpp\end{DoxyCompactItemize}
+\hyperlink{AbstractMesh_8h}{Abstract\+Mesh.\+h}\item 
+Abstract\+Mesh.\+cpp\end{DoxyCompactItemize}

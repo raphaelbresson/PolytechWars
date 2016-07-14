@@ -28,10 +28,10 @@ class SceneManager
 {
 public:
  /**
-  * \fn SceneManager()
+  * \fn SceneManager(int h)
   * \brief Constucteur
   */
-  SceneManager();
+  SceneManager(int h);
  /**
   * \fn ~SceneManager()
   * \brief Constucteur

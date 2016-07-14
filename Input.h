@@ -1,6 +1,12 @@
 #ifndef INPUT_H
 #define INPUT_H
+#include "Include_GL_and_GLM.h"
 #include <SDL2/SDL.h>
+#include <thread>
+#include <atomic>
+#include <condition_variable>
+#include <mutex>
+#include <chrono>
 /**
  * \file Input.h
  * \authors Raphaël BRESSON, Mehdi HAMMOUCHE
@@ -12,10 +18,10 @@ class Input
 {
 public:
   /**
-   * \fn Input()
+   * \fn Input(int maxY)
    * \brief Constructeur
    */
-  Input();
+  Input(int maxY);
   /**
    * \fn Input()
    * \brief Destructeur
@@ -62,11 +68,41 @@ public:
    */
   int getYRel() const;
   /**
+   * \fn int getXAbs() const
+   * \brief Renvoie la position horizontale de la souris
+   */
+  int getXAbs() const;
+  /**
+   * \fn int getYAbs() const
+   * \brief Renvoie la position verticale de la souris
+   */
+  int getYAbs() const;
+  /**
    * \fn bool terminer() const
    * \brief Renvoie true si le programme doit se terminer
    */
   bool terminer() const { return m_terminer; } 
+  /**
+   * \fn std::condition_variable *getConditionClick()
+   * \brief Retourne un pointeur vers la condition "clic de souris"
+   */
+  std::condition_variable *getConditionClick();
+  /**
+   * \fn std::mutex *m_clickMutex()
+   * \brief Retourne un pointeur vers le mutex de la condition click de souris
+   */
+  std::mutex *getClickMutex();  
+  /**
+   * \fn bool getPredicateClick()
+   * \brief Retourne la variable de prédicat de clic de souris
+   */
+  bool getPredicateClick();
 private:
+  /**
+   * \var int m_maxY
+   * \brief Résolution verticale de l'écran
+   */
+  int m_maxY;
   /**
    * \var int m_x
    * \brief mouvement horizontal de la souris absolu
@@ -117,5 +153,20 @@ private:
    * \brief Évênements SDL actuels
    */
   SDL_Event m_evenements;
+  /**
+   * \var std::condition_variable m_clickCond
+   * \brief Condition débloquée en cas de clic de souris
+   */
+  std::condition_variable m_clickCond;
+  /**
+   * \var std::mutex m_clickMutex
+   * \brief Mutex pour de la condition de clic de souris
+   */
+  mutable std::mutex m_clickMutex;
+  /**
+   * \var std::atomic<bool> m_predicateClick
+   * \brief Prédicat du clic de souris afin d'éviter les réveils parasites
+   */
+  std::atomic<bool> m_predicateClick;
 };
 #endif

@@ -1,0 +1,4 @@
+<map id="Skybox" name="Skybox">
+<area shape="rect" id="node2" href="$classAbstractMesh.html" title="Type polymorphe pour les modèles 3D. " alt="" coords="31,80,134,107"/>
+<area shape="rect" id="node3" href="$classAbstractGraphicObject.html" title="Classe abstraite définissant un type polymorphe pour les objets graphiques. " alt="" coords="5,5,160,32"/>
+</map>

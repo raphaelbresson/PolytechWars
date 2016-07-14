@@ -1,7 +1,7 @@
 # Makefile to build and install the SDL library
 
 top_builddir = .
-srcdir  = /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3
+srcdir  = /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3
 objects = build
 prefix = /usr/local
 exec_prefix = ${prefix}
@@ -16,11 +16,11 @@ distdir = SDL2-2.0.3
 distfile = $(distdir).tar.gz
 
 
-SHELL	= /bin/sh
+SHELL	= /bin/bash
 CC      = gcc
-INCLUDE = -Iinclude -I/home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/include
+INCLUDE = -Iinclude -I/home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/include
 CFLAGS  = -g -O3 -DUSING_GENERATED_CONFIG_H
-EXTRA_CFLAGS = -Iinclude -I/home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/include  -mmmx -m3dnow -msse -msse2 -fvisibility=hidden  -D_REENTRANT   -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include  -D_REENTRANT -DHAVE_LINUX_VERSION_H -Wall
+EXTRA_CFLAGS = -Iinclude -I/home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/include  -mmmx -m3dnow -msse -msse2 -fvisibility=hidden  -D_REENTRANT -DHAVE_LINUX_VERSION_H -Wall
 LDFLAGS = 
 EXTRA_LDFLAGS =  -Wl,--no-undefined -lm -ldl -lpthread -lrt
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
@@ -30,7 +30,7 @@ RANLIB	= ranlib
 WINDRES	= :
 
 TARGET  = libSDL2.la
-OBJECTS = $(objects)/SDL.lo $(objects)/SDL_assert.lo $(objects)/SDL_error.lo $(objects)/SDL_hints.lo $(objects)/SDL_log.lo $(objects)/SDL_atomic.lo $(objects)/SDL_spinlock.lo $(objects)/SDL_audio.lo $(objects)/SDL_audiocvt.lo $(objects)/SDL_audiodev.lo $(objects)/SDL_audiotypecvt.lo $(objects)/SDL_mixer.lo $(objects)/SDL_wave.lo $(objects)/SDL_cpuinfo.lo $(objects)/SDL_dynapi.lo $(objects)/SDL_clipboardevents.lo $(objects)/SDL_dropevents.lo $(objects)/SDL_events.lo $(objects)/SDL_gesture.lo $(objects)/SDL_keyboard.lo $(objects)/SDL_mouse.lo $(objects)/SDL_quit.lo $(objects)/SDL_touch.lo $(objects)/SDL_windowevents.lo $(objects)/SDL_rwops.lo $(objects)/SDL_haptic.lo $(objects)/SDL_gamecontroller.lo $(objects)/SDL_joystick.lo $(objects)/e_atan2.lo $(objects)/e_log.lo $(objects)/e_pow.lo $(objects)/e_rem_pio2.lo $(objects)/e_sqrt.lo $(objects)/k_cos.lo $(objects)/k_rem_pio2.lo $(objects)/k_sin.lo $(objects)/s_atan.lo $(objects)/s_copysign.lo $(objects)/s_cos.lo $(objects)/s_fabs.lo $(objects)/s_floor.lo $(objects)/s_scalbn.lo $(objects)/s_sin.lo $(objects)/SDL_power.lo $(objects)/SDL_d3dmath.lo $(objects)/SDL_render.lo $(objects)/SDL_yuv_mmx.lo $(objects)/SDL_yuv_sw.lo $(objects)/SDL_render_d3d.lo $(objects)/SDL_render_d3d11.lo $(objects)/SDL_render_gl.lo $(objects)/SDL_shaders_gl.lo $(objects)/SDL_render_gles.lo $(objects)/SDL_render_gles2.lo $(objects)/SDL_shaders_gles2.lo $(objects)/SDL_render_psp.lo $(objects)/SDL_blendfillrect.lo $(objects)/SDL_blendline.lo $(objects)/SDL_blendpoint.lo $(objects)/SDL_drawline.lo $(objects)/SDL_drawpoint.lo $(objects)/SDL_render_sw.lo $(objects)/SDL_rotate.lo $(objects)/SDL_getenv.lo $(objects)/SDL_iconv.lo $(objects)/SDL_malloc.lo $(objects)/SDL_qsort.lo $(objects)/SDL_stdlib.lo $(objects)/SDL_string.lo $(objects)/SDL_thread.lo $(objects)/SDL_timer.lo $(objects)/SDL_RLEaccel.lo $(objects)/SDL_blit.lo $(objects)/SDL_blit_0.lo $(objects)/SDL_blit_1.lo $(objects)/SDL_blit_A.lo $(objects)/SDL_blit_N.lo $(objects)/SDL_blit_auto.lo $(objects)/SDL_blit_copy.lo $(objects)/SDL_blit_slow.lo $(objects)/SDL_bmp.lo $(objects)/SDL_clipboard.lo $(objects)/SDL_egl.lo $(objects)/SDL_fillrect.lo $(objects)/SDL_pixels.lo $(objects)/SDL_rect.lo $(objects)/SDL_shape.lo $(objects)/SDL_stretch.lo $(objects)/SDL_surface.lo $(objects)/SDL_video.lo $(objects)/SDL_nullevents.lo $(objects)/SDL_nullframebuffer.lo $(objects)/SDL_nullvideo.lo $(objects)/SDL_diskaudio.lo $(objects)/SDL_dummyaudio.lo $(objects)/SDL_sysloadso.lo $(objects)/SDL_dspaudio.lo $(objects)/SDL_alsa_audio.lo $(objects)/SDL_pulseaudio.lo $(objects)/SDL_x11clipboard.lo $(objects)/SDL_x11dyn.lo $(objects)/SDL_x11events.lo $(objects)/SDL_x11framebuffer.lo $(objects)/SDL_x11keyboard.lo $(objects)/SDL_x11messagebox.lo $(objects)/SDL_x11modes.lo $(objects)/SDL_x11mouse.lo $(objects)/SDL_x11opengl.lo $(objects)/SDL_x11opengles.lo $(objects)/SDL_x11shape.lo $(objects)/SDL_x11touch.lo $(objects)/SDL_x11video.lo $(objects)/SDL_x11window.lo $(objects)/SDL_x11xinput2.lo $(objects)/edid-parse.lo $(objects)/imKStoUCS.lo $(objects)/SDL_systhread.lo $(objects)/SDL_syssem.lo $(objects)/SDL_sysmutex.lo $(objects)/SDL_syscond.lo $(objects)/SDL_systls.lo $(objects)/SDL_sysjoystick.lo $(objects)/SDL_syshaptic.lo $(objects)/SDL_syspower.lo $(objects)/SDL_sysfilesystem.lo $(objects)/SDL_systimer.lo $(objects)/SDL_udev.lo $(objects)/SDL_evdev.lo
+OBJECTS = $(objects)/SDL.lo $(objects)/SDL_assert.lo $(objects)/SDL_error.lo $(objects)/SDL_hints.lo $(objects)/SDL_log.lo $(objects)/SDL_atomic.lo $(objects)/SDL_spinlock.lo $(objects)/SDL_audio.lo $(objects)/SDL_audiocvt.lo $(objects)/SDL_audiodev.lo $(objects)/SDL_audiotypecvt.lo $(objects)/SDL_mixer.lo $(objects)/SDL_wave.lo $(objects)/SDL_cpuinfo.lo $(objects)/SDL_dynapi.lo $(objects)/SDL_clipboardevents.lo $(objects)/SDL_dropevents.lo $(objects)/SDL_events.lo $(objects)/SDL_gesture.lo $(objects)/SDL_keyboard.lo $(objects)/SDL_mouse.lo $(objects)/SDL_quit.lo $(objects)/SDL_touch.lo $(objects)/SDL_windowevents.lo $(objects)/SDL_rwops.lo $(objects)/SDL_haptic.lo $(objects)/SDL_gamecontroller.lo $(objects)/SDL_joystick.lo $(objects)/e_atan2.lo $(objects)/e_log.lo $(objects)/e_pow.lo $(objects)/e_rem_pio2.lo $(objects)/e_sqrt.lo $(objects)/k_cos.lo $(objects)/k_rem_pio2.lo $(objects)/k_sin.lo $(objects)/s_atan.lo $(objects)/s_copysign.lo $(objects)/s_cos.lo $(objects)/s_fabs.lo $(objects)/s_floor.lo $(objects)/s_scalbn.lo $(objects)/s_sin.lo $(objects)/SDL_power.lo $(objects)/SDL_d3dmath.lo $(objects)/SDL_render.lo $(objects)/SDL_yuv_mmx.lo $(objects)/SDL_yuv_sw.lo $(objects)/SDL_render_d3d.lo $(objects)/SDL_render_d3d11.lo $(objects)/SDL_render_gl.lo $(objects)/SDL_shaders_gl.lo $(objects)/SDL_render_gles.lo $(objects)/SDL_render_gles2.lo $(objects)/SDL_shaders_gles2.lo $(objects)/SDL_render_psp.lo $(objects)/SDL_blendfillrect.lo $(objects)/SDL_blendline.lo $(objects)/SDL_blendpoint.lo $(objects)/SDL_drawline.lo $(objects)/SDL_drawpoint.lo $(objects)/SDL_render_sw.lo $(objects)/SDL_rotate.lo $(objects)/SDL_getenv.lo $(objects)/SDL_iconv.lo $(objects)/SDL_malloc.lo $(objects)/SDL_qsort.lo $(objects)/SDL_stdlib.lo $(objects)/SDL_string.lo $(objects)/SDL_thread.lo $(objects)/SDL_timer.lo $(objects)/SDL_RLEaccel.lo $(objects)/SDL_blit.lo $(objects)/SDL_blit_0.lo $(objects)/SDL_blit_1.lo $(objects)/SDL_blit_A.lo $(objects)/SDL_blit_N.lo $(objects)/SDL_blit_auto.lo $(objects)/SDL_blit_copy.lo $(objects)/SDL_blit_slow.lo $(objects)/SDL_bmp.lo $(objects)/SDL_clipboard.lo $(objects)/SDL_egl.lo $(objects)/SDL_fillrect.lo $(objects)/SDL_pixels.lo $(objects)/SDL_rect.lo $(objects)/SDL_shape.lo $(objects)/SDL_stretch.lo $(objects)/SDL_surface.lo $(objects)/SDL_video.lo $(objects)/SDL_nullevents.lo $(objects)/SDL_nullframebuffer.lo $(objects)/SDL_nullvideo.lo $(objects)/SDL_diskaudio.lo $(objects)/SDL_dummyaudio.lo $(objects)/SDL_sysloadso.lo $(objects)/SDL_dspaudio.lo $(objects)/SDL_x11clipboard.lo $(objects)/SDL_x11dyn.lo $(objects)/SDL_x11events.lo $(objects)/SDL_x11framebuffer.lo $(objects)/SDL_x11keyboard.lo $(objects)/SDL_x11messagebox.lo $(objects)/SDL_x11modes.lo $(objects)/SDL_x11mouse.lo $(objects)/SDL_x11opengl.lo $(objects)/SDL_x11opengles.lo $(objects)/SDL_x11shape.lo $(objects)/SDL_x11touch.lo $(objects)/SDL_x11video.lo $(objects)/SDL_x11window.lo $(objects)/SDL_x11xinput2.lo $(objects)/edid-parse.lo $(objects)/imKStoUCS.lo $(objects)/SDL_systhread.lo $(objects)/SDL_syssem.lo $(objects)/SDL_sysmutex.lo $(objects)/SDL_syscond.lo $(objects)/SDL_systls.lo $(objects)/SDL_sysjoystick.lo $(objects)/SDL_syshaptic.lo $(objects)/SDL_syspower.lo $(objects)/SDL_sysfilesystem.lo $(objects)/SDL_systimer.lo $(objects)/SDL_evdev.lo
 VERSION_OBJECTS = 
 
 SDLMAIN_TARGET = libSDL2main.a
@@ -222,423 +222,414 @@ rpm: $(distfile)
 -include $(OBJECTS:.lo=.d)
 
 # Special dependency for SDL.c, since it depends on SDL_revision.h
-/home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/SDL.c: update-revision
+/home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/SDL.c: update-revision
 
-$(objects)/SDL.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/SDL.c
+$(objects)/SDL.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/SDL.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_assert.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/SDL_assert.c
+$(objects)/SDL_assert.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/SDL_assert.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_error.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/SDL_error.c
+$(objects)/SDL_error.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/SDL_error.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_hints.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/SDL_hints.c
+$(objects)/SDL_hints.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/SDL_hints.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_log.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/SDL_log.c
+$(objects)/SDL_log.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/SDL_log.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_atomic.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/atomic/SDL_atomic.c
+$(objects)/SDL_atomic.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/atomic/SDL_atomic.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_spinlock.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/atomic/SDL_spinlock.c
+$(objects)/SDL_spinlock.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/atomic/SDL_spinlock.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audio.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audio.c
+$(objects)/SDL_audio.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audio.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiocvt.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audiocvt.c
+$(objects)/SDL_audiocvt.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audiocvt.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiodev.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audiodev.c
+$(objects)/SDL_audiodev.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audiodev.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_audiotypecvt.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audiotypecvt.c
+$(objects)/SDL_audiotypecvt.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/SDL_audiotypecvt.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_mixer.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/SDL_mixer.c
+$(objects)/SDL_mixer.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/SDL_mixer.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_wave.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/SDL_wave.c
+$(objects)/SDL_wave.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/SDL_wave.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_cpuinfo.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/cpuinfo/SDL_cpuinfo.c
+$(objects)/SDL_cpuinfo.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/cpuinfo/SDL_cpuinfo.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dynapi.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/dynapi/SDL_dynapi.c
+$(objects)/SDL_dynapi.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/dynapi/SDL_dynapi.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_clipboardevents.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_clipboardevents.c
+$(objects)/SDL_clipboardevents.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_clipboardevents.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dropevents.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_dropevents.c
+$(objects)/SDL_dropevents.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_dropevents.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_events.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_events.c
+$(objects)/SDL_events.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_events.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_gesture.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_gesture.c
+$(objects)/SDL_gesture.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_gesture.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_keyboard.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_keyboard.c
+$(objects)/SDL_keyboard.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_keyboard.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_mouse.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_mouse.c
+$(objects)/SDL_mouse.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_mouse.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_quit.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_quit.c
+$(objects)/SDL_quit.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_quit.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_touch.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_touch.c
+$(objects)/SDL_touch.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_touch.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_windowevents.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/events/SDL_windowevents.c
+$(objects)/SDL_windowevents.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/events/SDL_windowevents.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rwops.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/file/SDL_rwops.c
+$(objects)/SDL_rwops.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/file/SDL_rwops.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_haptic.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/haptic/SDL_haptic.c
+$(objects)/SDL_haptic.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/haptic/SDL_haptic.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_gamecontroller.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/joystick/SDL_gamecontroller.c
+$(objects)/SDL_gamecontroller.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/joystick/SDL_gamecontroller.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_joystick.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/joystick/SDL_joystick.c
+$(objects)/SDL_joystick.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/joystick/SDL_joystick.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_atan2.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/e_atan2.c
+$(objects)/e_atan2.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/e_atan2.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_log.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/e_log.c
+$(objects)/e_log.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/e_log.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_pow.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/e_pow.c
+$(objects)/e_pow.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/e_pow.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_rem_pio2.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/e_rem_pio2.c
+$(objects)/e_rem_pio2.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/e_rem_pio2.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/e_sqrt.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/e_sqrt.c
+$(objects)/e_sqrt.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/e_sqrt.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_cos.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/k_cos.c
+$(objects)/k_cos.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/k_cos.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_rem_pio2.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/k_rem_pio2.c
+$(objects)/k_rem_pio2.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/k_rem_pio2.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/k_sin.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/k_sin.c
+$(objects)/k_sin.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/k_sin.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_atan.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/s_atan.c
+$(objects)/s_atan.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/s_atan.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_copysign.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/s_copysign.c
+$(objects)/s_copysign.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/s_copysign.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_cos.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/s_cos.c
+$(objects)/s_cos.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/s_cos.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_fabs.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/s_fabs.c
+$(objects)/s_fabs.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/s_fabs.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_floor.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/s_floor.c
+$(objects)/s_floor.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/s_floor.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_scalbn.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/s_scalbn.c
+$(objects)/s_scalbn.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/s_scalbn.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/s_sin.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/libm/s_sin.c
+$(objects)/s_sin.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/libm/s_sin.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_power.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/power/SDL_power.c
+$(objects)/SDL_power.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/power/SDL_power.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_d3dmath.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/SDL_d3dmath.c
+$(objects)/SDL_d3dmath.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/SDL_d3dmath.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/SDL_render.c
+$(objects)/SDL_render.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/SDL_render.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_yuv_mmx.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/SDL_yuv_mmx.c
+$(objects)/SDL_yuv_mmx.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/SDL_yuv_mmx.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_yuv_sw.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/SDL_yuv_sw.c
+$(objects)/SDL_yuv_sw.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/SDL_yuv_sw.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_d3d.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/direct3d/SDL_render_d3d.c
+$(objects)/SDL_render_d3d.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/direct3d/SDL_render_d3d.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_d3d11.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/direct3d11/SDL_render_d3d11.c
+$(objects)/SDL_render_d3d11.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/direct3d11/SDL_render_d3d11.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gl.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/opengl/SDL_render_gl.c
+$(objects)/SDL_render_gl.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/opengl/SDL_render_gl.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_gl.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/opengl/SDL_shaders_gl.c
+$(objects)/SDL_shaders_gl.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/opengl/SDL_shaders_gl.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gles.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/opengles/SDL_render_gles.c
+$(objects)/SDL_render_gles.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/opengles/SDL_render_gles.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_gles2.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/opengles2/SDL_render_gles2.c
+$(objects)/SDL_render_gles2.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/opengles2/SDL_render_gles2.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shaders_gles2.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/opengles2/SDL_shaders_gles2.c
+$(objects)/SDL_shaders_gles2.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/opengles2/SDL_shaders_gles2.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_psp.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/psp/SDL_render_psp.c
+$(objects)/SDL_render_psp.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/psp/SDL_render_psp.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendfillrect.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_blendfillrect.c
+$(objects)/SDL_blendfillrect.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_blendfillrect.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendline.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_blendline.c
+$(objects)/SDL_blendline.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_blendline.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blendpoint.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_blendpoint.c
+$(objects)/SDL_blendpoint.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_blendpoint.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_drawline.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_drawline.c
+$(objects)/SDL_drawline.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_drawline.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_drawpoint.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_drawpoint.c
+$(objects)/SDL_drawpoint.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_drawpoint.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_render_sw.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_render_sw.c
+$(objects)/SDL_render_sw.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_render_sw.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rotate.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_rotate.c
+$(objects)/SDL_rotate.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/render/software/SDL_rotate.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_getenv.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_getenv.c
+$(objects)/SDL_getenv.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_getenv.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_iconv.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_iconv.c
+$(objects)/SDL_iconv.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_iconv.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_malloc.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_malloc.c
+$(objects)/SDL_malloc.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_malloc.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_qsort.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_qsort.c
+$(objects)/SDL_qsort.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_qsort.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_stdlib.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_stdlib.c
+$(objects)/SDL_stdlib.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_stdlib.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_string.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_string.c
+$(objects)/SDL_string.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/stdlib/SDL_string.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_thread.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/thread/SDL_thread.c
+$(objects)/SDL_thread.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/thread/SDL_thread.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_timer.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/timer/SDL_timer.c
+$(objects)/SDL_timer.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/timer/SDL_timer.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_RLEaccel.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_RLEaccel.c
+$(objects)/SDL_RLEaccel.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_RLEaccel.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit.c
+$(objects)/SDL_blit.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_0.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_0.c
+$(objects)/SDL_blit_0.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_0.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_1.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_1.c
+$(objects)/SDL_blit_1.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_1.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_A.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_A.c
+$(objects)/SDL_blit_A.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_A.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_N.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_N.c
+$(objects)/SDL_blit_N.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_N.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_auto.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_auto.c
+$(objects)/SDL_blit_auto.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_auto.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_copy.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_copy.c
+$(objects)/SDL_blit_copy.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_copy.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_blit_slow.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_slow.c
+$(objects)/SDL_blit_slow.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_blit_slow.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_bmp.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_bmp.c
+$(objects)/SDL_bmp.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_bmp.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_clipboard.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_clipboard.c
+$(objects)/SDL_clipboard.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_clipboard.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_egl.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_egl.c
+$(objects)/SDL_egl.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_egl.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_fillrect.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_fillrect.c
+$(objects)/SDL_fillrect.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_fillrect.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_pixels.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_pixels.c
+$(objects)/SDL_pixels.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_pixels.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_rect.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_rect.c
+$(objects)/SDL_rect.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_rect.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_shape.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_shape.c
+$(objects)/SDL_shape.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_shape.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_stretch.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_stretch.c
+$(objects)/SDL_stretch.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_stretch.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_surface.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_surface.c
+$(objects)/SDL_surface.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_surface.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_video.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/SDL_video.c
+$(objects)/SDL_video.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/SDL_video.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullevents.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/dummy/SDL_nullevents.c
+$(objects)/SDL_nullevents.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/dummy/SDL_nullevents.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullframebuffer.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/dummy/SDL_nullframebuffer.c
+$(objects)/SDL_nullframebuffer.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/dummy/SDL_nullframebuffer.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_nullvideo.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/dummy/SDL_nullvideo.c
+$(objects)/SDL_nullvideo.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/dummy/SDL_nullvideo.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_diskaudio.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/disk/SDL_diskaudio.c
+$(objects)/SDL_diskaudio.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/disk/SDL_diskaudio.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dummyaudio.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/dummy/SDL_dummyaudio.c
+$(objects)/SDL_dummyaudio.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/dummy/SDL_dummyaudio.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysloadso.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/loadso/dlopen/SDL_sysloadso.c
+$(objects)/SDL_sysloadso.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/loadso/dlopen/SDL_sysloadso.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_dspaudio.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/dsp/SDL_dspaudio.c
+$(objects)/SDL_dspaudio.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/audio/dsp/SDL_dspaudio.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_alsa_audio.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/alsa/SDL_alsa_audio.c
+$(objects)/SDL_x11clipboard.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11clipboard.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_pulseaudio.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/audio/pulseaudio/SDL_pulseaudio.c
+$(objects)/SDL_x11dyn.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11dyn.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11clipboard.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11clipboard.c
+$(objects)/SDL_x11events.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11events.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11dyn.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11dyn.c
+$(objects)/SDL_x11framebuffer.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11framebuffer.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11events.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11events.c
+$(objects)/SDL_x11keyboard.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11keyboard.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11framebuffer.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11framebuffer.c
+$(objects)/SDL_x11messagebox.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11messagebox.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11keyboard.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11keyboard.c
+$(objects)/SDL_x11modes.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11modes.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11messagebox.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11messagebox.c
+$(objects)/SDL_x11mouse.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11mouse.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11modes.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11modes.c
+$(objects)/SDL_x11opengl.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11opengl.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11mouse.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11mouse.c
+$(objects)/SDL_x11opengles.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11opengles.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11opengl.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11opengl.c
+$(objects)/SDL_x11shape.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11shape.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11opengles.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11opengles.c
+$(objects)/SDL_x11touch.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11touch.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11shape.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11shape.c
+$(objects)/SDL_x11video.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11video.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11touch.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11touch.c
+$(objects)/SDL_x11window.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11window.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11video.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11video.c
+$(objects)/SDL_x11xinput2.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11xinput2.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11window.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11window.c
+$(objects)/edid-parse.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/edid-parse.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_x11xinput2.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/SDL_x11xinput2.c
+$(objects)/imKStoUCS.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/video/x11/imKStoUCS.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/edid-parse.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/edid-parse.c
+$(objects)/SDL_systhread.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_systhread.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/imKStoUCS.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/video/x11/imKStoUCS.c
+$(objects)/SDL_syssem.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_syssem.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_systhread.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_systhread.c
+$(objects)/SDL_sysmutex.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_sysmutex.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syssem.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_syssem.c
+$(objects)/SDL_syscond.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_syscond.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysmutex.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_sysmutex.c
+$(objects)/SDL_systls.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_systls.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syscond.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_syscond.c
+$(objects)/SDL_sysjoystick.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/joystick/linux/SDL_sysjoystick.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_systls.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/thread/pthread/SDL_systls.c
+$(objects)/SDL_syshaptic.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/haptic/linux/SDL_syshaptic.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysjoystick.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/joystick/linux/SDL_sysjoystick.c
+$(objects)/SDL_syspower.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/power/linux/SDL_syspower.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syshaptic.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/haptic/linux/SDL_syshaptic.c
+$(objects)/SDL_sysfilesystem.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/filesystem/unix/SDL_sysfilesystem.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_syspower.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/power/linux/SDL_syspower.c
+$(objects)/SDL_systimer.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/timer/unix/SDL_systimer.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_sysfilesystem.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/filesystem/unix/SDL_sysfilesystem.c
+$(objects)/SDL_evdev.lo: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/core/linux/SDL_evdev.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_systimer.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/timer/unix/SDL_systimer.c
-	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_udev.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/core/linux/SDL_udev.c
-	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
-$(objects)/SDL_evdev.lo: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/core/linux/SDL_evdev.c
-	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
-
 
-$(objects)/SDL_dummy_main.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/main/dummy/SDL_dummy_main.c
+$(objects)/SDL_dummy_main.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/main/dummy/SDL_dummy_main.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@
 
-$(objects)/SDL_test_assert.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_assert.c
+$(objects)/SDL_test_assert.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_assert.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_common.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_common.c
+$(objects)/SDL_test_common.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_common.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_compare.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_compare.c
+$(objects)/SDL_test_compare.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_compare.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_crc32.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_crc32.c
+$(objects)/SDL_test_crc32.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_crc32.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_font.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_font.c
+$(objects)/SDL_test_font.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_font.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_fuzzer.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_fuzzer.c
+$(objects)/SDL_test_fuzzer.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_fuzzer.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_harness.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_harness.c
+$(objects)/SDL_test_harness.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_harness.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageBlit.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imageBlit.c
+$(objects)/SDL_test_imageBlit.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imageBlit.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageBlitBlend.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imageBlitBlend.c
+$(objects)/SDL_test_imageBlitBlend.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imageBlitBlend.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imageFace.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imageFace.c
+$(objects)/SDL_test_imageFace.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imageFace.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imagePrimitives.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imagePrimitives.c
+$(objects)/SDL_test_imagePrimitives.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imagePrimitives.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_imagePrimitivesBlend.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imagePrimitivesBlend.c
+$(objects)/SDL_test_imagePrimitivesBlend.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_imagePrimitivesBlend.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_log.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_log.c
+$(objects)/SDL_test_log.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_log.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_md5.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_md5.c
+$(objects)/SDL_test_md5.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_md5.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@ 
-$(objects)/SDL_test_random.o: /home/raphael/Desktop/PROJETS/projetC++/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_random.c
+$(objects)/SDL_test_random.o: /home/raphael/Desktop/3D/PolytechWars/Bibliotheques/SDL2-2.0.3/src/test/SDL_test_random.c
 	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(EXTRA_CFLAGS) -MMD -MT $@ -c $< -o $@

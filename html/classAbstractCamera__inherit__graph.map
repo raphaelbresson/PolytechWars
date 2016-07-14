@@ -1,0 +1,4 @@
+<map id="AbstractCamera" name="AbstractCamera">
+<area shape="rect" id="node2" href="$classCameraFlightSimulator.html" title="Implémentation de la caméra de simulateur de vol. " alt="" coords="5,80,160,107"/>
+<area shape="rect" id="node3" href="$classCameraFPS.html" title="Caméra de type Freefly à deux degrés de liberté en fixant l&#39;axe vertical. " alt="" coords="185,80,279,107"/>
+</map>

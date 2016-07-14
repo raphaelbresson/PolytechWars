@@ -1,0 +1,4 @@
+<map id="Label" name="Label">
+<area shape="rect" id="node2" href="$classAbstractWidget.html" title="Classe abstraite mère de tous les objets 2D. " alt="" coords="27,80,139,107"/>
+<area shape="rect" id="node3" href="$classAbstractGraphicObject.html" title="Classe abstraite définissant un type polymorphe pour les objets graphiques. " alt="" coords="5,5,160,32"/>
+</map>

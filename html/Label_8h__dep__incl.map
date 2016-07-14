@@ -1,0 +1,5 @@
+<map id="Label.h" name="Label.h">
+<area shape="rect" id="node2" href="$GuiFactory_8h.html" title="Gestion de la construction des objets 2D. " alt="" coords="26,80,123,107"/>
+<area shape="rect" id="node3" href="$SceneManager_8h.html" title="Gestion des modèles et de l&#39;affichage. " alt="" coords="15,155,135,181"/>
+<area shape="rect" id="node4" href="$ApplicationControl_8h.html" title="Gestion de la SDL et de OpenGL ainsi que du SceneManager. " alt="" coords="5,229,144,256"/>
+</map>

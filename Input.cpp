@@ -2,9 +2,10 @@
 
 #define NB_MOUSE_BUTTON 8
 
-Input::Input() : 
-  m_x(0), m_y(0), m_xRel(0), m_yRel(0), m_terminer(false)
+Input::Input(int maxY) : 
+  m_maxY(maxY),m_x(0), m_y(0), m_xRel(0), m_yRel(0), m_terminer(false), m_clickCond(), m_clickMutex()
 {
+  m_predicateClick = ATOMIC_VAR_INIT(false);
   for(unsigned int i = 0 ; i < SDL_NUM_SCANCODES ; i++)
   {
     m_keys[i] = false;
@@ -101,4 +102,29 @@ int Input::getXRel() const
 int Input::getYRel() const
 {
   return m_yRel;
+}
+
+int Input::getXAbs() const
+{
+  return m_x;
+}
+
+int Input::getYAbs() const
+{
+  return m_maxY - m_y;
+}
+
+std::condition_variable *Input::getConditionClick()
+{
+  return &m_clickCond;
+}
+
+std::mutex *Input::getClickMutex()
+{
+  return &m_clickMutex;
+}
+
+bool Input::getPredicateClick()
+{
+  return m_predicateClick;
 }

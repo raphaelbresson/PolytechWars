@@ -1,0 +1,86 @@
+\hypertarget{classAbstractButton}{\section{Abstract\+Button Class Reference}
+\label{classAbstractButton}\index{Abstract\+Button@{Abstract\+Button}}
+}
+
+
+Type polymorphe pour les boutons.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Button.\+h$>$}
+
+
+
+Inheritance diagram for Abstract\+Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classAbstractButton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Abstract\+Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classAbstractButton__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAbstractButton_a1e6fec84d19280e39f0b4380b9de6029}{\hyperlink{classAbstractButton_a1e6fec84d19280e39f0b4380b9de6029}{Abstract\+Button} (\hyperlink{classShader}{Shader} $\ast$shad, glm\+::vec2 position, \hyperlink{classInput}{Input} $\ast$input)}\label{classAbstractButton_a1e6fec84d19280e39f0b4380b9de6029}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_ae3d97004edc96ee5ccf9719df9c2458a}{\hyperlink{classAbstractButton_ae3d97004edc96ee5ccf9719df9c2458a}{$\sim$\+Abstract\+Button} ()}\label{classAbstractButton_ae3d97004edc96ee5ccf9719df9c2458a}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_ad306c40d3966ae3d2187c88b426a1082}{virtual void \hyperlink{classAbstractButton_ad306c40d3966ae3d2187c88b426a1082}{draw} (glm\+::mat4 ortho)=0}\label{classAbstractButton_ad306c40d3966ae3d2187c88b426a1082}
+
+\begin{DoxyCompactList}\small\item\em Méthode d'affichage (virtuelle pure) \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_a328cfee71f7ef2cced5b8b79e27f81e9}{void \hyperlink{classAbstractButton_a328cfee71f7ef2cced5b8b79e27f81e9}{set\+Dimensions} (glm\+::vec2 dim)}\label{classAbstractButton_a328cfee71f7ef2cced5b8b79e27f81e9}
+
+\begin{DoxyCompactList}\small\item\em Modificateur de dimensions. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_ab5e449bb4bd6a848c7dcd58b0644b0ec}{glm\+::vec2 \hyperlink{classAbstractButton_ab5e449bb4bd6a848c7dcd58b0644b0ec}{get\+Dimensions} () const }\label{classAbstractButton_ab5e449bb4bd6a848c7dcd58b0644b0ec}
+
+\begin{DoxyCompactList}\small\item\em Retourne les dimensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAbstractButton_a15394cc151c318ea2bd66a53a978cfcb}{void \hyperlink{classAbstractButton_a15394cc151c318ea2bd66a53a978cfcb}{event\+Handler} ()}\label{classAbstractButton_a15394cc151c318ea2bd66a53a978cfcb}
+
+\begin{DoxyCompactList}\small\item\em Gère les évênements. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_a06155e27d4445be22b9444f21bc31567}{virtual void \hyperlink{classAbstractButton_a06155e27d4445be22b9444f21bc31567}{on\+Click\+Event} ()=0}\label{classAbstractButton_a06155e27d4445be22b9444f21bc31567}
+
+\begin{DoxyCompactList}\small\item\em Virtuelle pure pour gérer le clic de souris. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAbstractButton_a33c3fc97f6ef73e14100b5e509126b58}{bool \hyperlink{classAbstractButton_a33c3fc97f6ef73e14100b5e509126b58}{m\+\_\+stop\+Thread}}\label{classAbstractButton_a33c3fc97f6ef73e14100b5e509126b58}
+
+\begin{DoxyCompactList}\small\item\em Booléen pour stopper les threads de gestion des évênements. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_a178077a576ee755db7c839afea45bcc8}{std\+::thread \hyperlink{classAbstractButton_a178077a576ee755db7c839afea45bcc8}{m\+\_\+thread\+Click\+Event}}\label{classAbstractButton_a178077a576ee755db7c839afea45bcc8}
+
+\begin{DoxyCompactList}\small\item\em Thread de gestion du clic de souris. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_a949ebd940f2031815c706ff07f40a34c}{std\+::condition\+\_\+variable $\ast$ \hyperlink{classAbstractButton_a949ebd940f2031815c706ff07f40a34c}{m\+\_\+clicked}}\label{classAbstractButton_a949ebd940f2031815c706ff07f40a34c}
+
+\begin{DoxyCompactList}\small\item\em Condition de gestion du clic de souris. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_af964e22e2b6ee3fd0eb060dae764c425}{std\+::unique\+\_\+lock$<$ std\+::mutex $>$ \hyperlink{classAbstractButton_af964e22e2b6ee3fd0eb060dae764c425}{m\+\_\+clicked\+Lock}}\label{classAbstractButton_af964e22e2b6ee3fd0eb060dae764c425}
+
+\begin{DoxyCompactList}\small\item\em Mutex de gestion du clic de souris. \end{DoxyCompactList}\item 
+\hypertarget{classAbstractButton_aa2adf3970c7a506543514ca366c1be60}{glm\+::vec2 \hyperlink{classAbstractButton_aa2adf3970c7a506543514ca366c1be60}{m\+\_\+dimensions}}\label{classAbstractButton_aa2adf3970c7a506543514ca366c1be60}
+
+\begin{DoxyCompactList}\small\item\em Dimensions du bouton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Type polymorphe pour les boutons. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{AbstractButton_8h}{Abstract\+Button.\+h}\item 
+Abstract\+Button.\+cpp\end{DoxyCompactItemize}

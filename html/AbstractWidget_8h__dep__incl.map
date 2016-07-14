@@ -1,0 +1,7 @@
+<map id="AbstractWidget.h" name="AbstractWidget.h">
+<area shape="rect" id="node2" href="$AbstractButton_8h.html" title="Définit un type polymorphe pour les boutons. " alt="" coords="5,80,125,107"/>
+<area shape="rect" id="node3" href="$Label_8h.html" title="Gestion de l&#39;affichage de texte. " alt="" coords="149,80,213,107"/>
+<area shape="rect" id="node4" href="$GuiFactory_8h.html" title="Gestion de la construction des objets 2D. " alt="" coords="133,155,230,181"/>
+<area shape="rect" id="node5" href="$SceneManager_8h.html" title="Gestion des modèles et de l&#39;affichage. " alt="" coords="121,229,241,256"/>
+<area shape="rect" id="node6" href="$ApplicationControl_8h.html" title="Gestion de la SDL et de OpenGL ainsi que du SceneManager. " alt="" coords="112,304,251,331"/>
+</map>

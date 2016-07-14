@@ -15,7 +15,7 @@ class Label : public AbstractWidget
 public:
   /**
    * \fn Label(std::string const& font,unsigned int tailleFont, Shader *shad, glm::vec2 position)
-   * \brief Constructeur+
+   * \brief Constructeur
    */
   Label(std::string const&  font,unsigned int tailleFont, Shader *shad, glm::vec2 const& position);
   /**

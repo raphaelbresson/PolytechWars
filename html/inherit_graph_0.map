@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classAbstractCamera.html" title="Type polymorphe pour les caméras (point de vue sur le monde 3D) " alt="" coords="5,31,123,57"/>
+<area shape="rect" id="node2" href="$classCameraFlightSimulator.html" title="Implémentation de la caméra de simulateur de vol. " alt="" coords="171,5,325,32"/>
+<area shape="rect" id="node3" href="$classCameraFPS.html" title="Caméra de type Freefly à deux degrés de liberté en fixant l&#39;axe vertical. " alt="" coords="201,56,295,83"/>
+</map>

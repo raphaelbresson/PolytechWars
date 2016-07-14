@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classTexture.html" title="Gère les textures OpenGL et leur importation via une image ou une police. " alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node2" href="$classFont.html" title="Gère la conversion de texte en texture GL à partir d&#39;une police. " alt="" coords="120,5,168,32"/>
+</map>

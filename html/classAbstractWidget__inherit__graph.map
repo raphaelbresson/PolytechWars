@@ -1,0 +1,5 @@
+<map id="AbstractWidget" name="AbstractWidget">
+<area shape="rect" id="node3" href="$classAbstractButton.html" title="Type polymorphe pour les boutons. " alt="" coords="5,155,115,181"/>
+<area shape="rect" id="node4" href="$classLabel.html" title="Représente un objet Texte 2D. " alt="" coords="139,155,192,181"/>
+<area shape="rect" id="node2" href="$classAbstractGraphicObject.html" title="Classe abstraite définissant un type polymorphe pour les objets graphiques. " alt="" coords="35,5,189,32"/>
+</map>

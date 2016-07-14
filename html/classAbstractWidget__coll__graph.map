@@ -1,0 +1,4 @@
+<map id="AbstractWidget" name="AbstractWidget">
+<area shape="rect" id="node2" href="$classAbstractGraphicObject.html" title="Classe abstraite définissant un type polymorphe pour les objets graphiques. " alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node3" href="$classShader.html" title="Classe de gestion de programmes shaders (compilation, édition de liens, contrôle et destruction) ..." alt="" coords="51,5,114,32"/>
+</map>
